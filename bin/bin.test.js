@@ -165,7 +165,7 @@ describe('main binary', function () {
     );
   });
 
-  describe.only('workflow files', function () {
+  describe('workflow files', function () {
     function expectedPublishWorkflowContents(kind = 'npm') {
       let publishTemplate = fs.readFileSync(
         path.join(__dirname, '..', 'publish-template.yml.ejs'),
