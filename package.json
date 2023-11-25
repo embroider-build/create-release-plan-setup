@@ -31,7 +31,7 @@
     "mdast-util-from-markdown": "^0.8.5",
     "semver": "^7.3.5",
     "sort-package-json": "^1.50.0",
-    "which": "^3.0.0"
+    "which": "^4.0.0"
   },
   "devDependencies": {
     "eslint": "^8.54.0",
