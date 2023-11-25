@@ -5,12 +5,12 @@ import util from 'util';
 import execa from 'execa';
 import sortPackageJson from 'sort-package-json';
 import gitconfiglocal from 'gitconfiglocal';
-import which from 'which';
 import parseMarkdown from 'mdast-util-from-markdown';
-import findRepoURL from '../lib/findRepoUrl.js'
+import findRepoURL from '../lib/findRepoUrl.js';
 import getDependencyRange from '../lib/getDependencyRange.js';
 import ejs from 'ejs';
 import { mkdir } from 'fs/promises';
+import githubLabelSync from 'github-label-sync';
 
 const RELEASE_PLAN_VERSION = (() => {
   const anotherFile = new URL('../package.json', import.meta.url);
@@ -29,21 +29,10 @@ const update = process.argv.includes('--update');
 
 const DETECT_TRAILING_WHITESPACE = /\s+$/;
 
-function hasEditor() {
-  let EDITOR = process.env.EDITOR;
-
-  if (!EDITOR) {
-    EDITOR = which.sync('editor', { nothrow: true });
-  }
-
-  return !!EDITOR;
-}
-
 async function updatePackageJSON() {
   let contents = fs.readFileSync('package.json', { encoding: 'utf8' });
   let trailingWhitespace = DETECT_TRAILING_WHITESPACE.exec(contents);
   let pkg = JSON.parse(contents);
-  let hasWorkspaces = !!pkg.workspaces;
 
   if (labelsOnly) {
     return pkg;
@@ -91,10 +80,9 @@ async function updateLabels(pkg) {
     return;
   }
 
-  const githubLabelSync = require('github-label-sync');
-
   let accessToken = process.env.GITHUB_AUTH;
-  let labels = require('../labels');
+  const data = fs.readFileSync(new URL('../labels.json', import.meta.url), 'utf-8');
+  const labels = JSON.parse(data);
   let repo = findRepoURL(pkg);
 
   // no repository setup, bail
@@ -132,19 +120,19 @@ async function installDependencies() {
   }
 }
 
-
 try {
   if (!fs.existsSync('package.json')) {
     /* eslint-disable-next-line no-console */
     console.error(
       "create-release-plan-setup should be run from within an existing npm package's root directory"
     );
+    // eslint-disable-next-line no-process-exit
     process.exit(1);
   }
 
   let hasChangelog = fs.existsSync('CHANGELOG.md');
 
-  console.log({hasChangelog});
+  console.log({ hasChangelog });
 
   if (!hasChangelog && !labelsOnly) {
     fs.writeFileSync('CHANGELOG.md', '# Changelog\n', { encoding: 'utf8' });
@@ -166,13 +154,27 @@ try {
   let pkg = await updatePackageJSON();
 
   if ((!fs.existsSync('.github/workflows/publish.yml') || update) && !labelsOnly) {
-    let publishContents = fs.readFileSync(new URL('../publish-template.yml.ejs', import.meta.url), 'utf8');
-    let planReleaseContents = fs.readFileSync(new URL('../plan-release-template.yml.ejs', import.meta.url), 'utf8');
+    let publishContents = fs.readFileSync(
+      new URL('../publish-template.yml.ejs', import.meta.url),
+      'utf8'
+    );
+    let planReleaseContents = fs.readFileSync(
+      new URL('../plan-release-template.yml.ejs', import.meta.url),
+      'utf8'
+    );
 
-    await mkdir('.github/workflows', {recursive: true});
+    await mkdir('.github/workflows', { recursive: true });
 
-    fs.writeFileSync('.github/workflows/publish.yml', ejs.render(publishContents, { pnpm: isPnpm() }), { encoding: 'utf8'})
-    fs.writeFileSync('.github/workflows/plan-release.yml', ejs.render(planReleaseContents, { pnpm: isPnpm() }), { encoding: 'utf8'})
+    fs.writeFileSync(
+      '.github/workflows/publish.yml',
+      ejs.render(publishContents, { pnpm: isPnpm() }),
+      { encoding: 'utf8' }
+    );
+    fs.writeFileSync(
+      '.github/workflows/plan-release.yml',
+      ejs.render(planReleaseContents, { pnpm: isPnpm() }),
+      { encoding: 'utf8' }
+    );
   }
 
   if ((!fs.existsSync('RELEASE.md') || update) && !labelsOnly) {
@@ -182,15 +184,13 @@ try {
     const repoUrl = findRepoURL(pkg);
 
     let planReleaseReplacementValue = `https://github.com/${repoUrl}/pulls?q=is%3Apr+is%3Aopen+%22Plan+Release%22+in%3Atitle`;
-    
 
     fs.writeFileSync(
       'RELEASE.md',
-      releaseContents
-        .replace('{{PLAN_RELEASE_PR}}', planReleaseReplacementValue),
+      releaseContents.replace('{{PLAN_RELEASE_PR}}', planReleaseReplacementValue),
       { encoding: 'utf8' }
     );
-  }  
+  }
 
   await installDependencies();
 

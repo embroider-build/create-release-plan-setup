@@ -1,3 +1,4 @@
+/* global require, __dirname */
 import fs from 'fs';
 import path, { resolve } from 'path';
 import Project from 'fixturify-project';
@@ -164,42 +165,56 @@ describe('main binary', function () {
     );
   });
 
-  describe.only('workflow files', function() {
+  describe.only('workflow files', function () {
     function expectedPublishWorkflowContents(kind = 'npm') {
-      let publishTemplate = fs.readFileSync(path.join(__dirname, '..', 'publish-template.yml.ejs'), {
-        encoding: 'utf8',
-      });
+      let publishTemplate = fs.readFileSync(
+        path.join(__dirname, '..', 'publish-template.yml.ejs'),
+        {
+          encoding: 'utf8',
+        }
+      );
 
       return ejs.render(publishTemplate, { pnpm: kind === 'pnpm' });
     }
 
     function expectedPlanReleaseWorkflowContents(kind = 'npm') {
-      let publishTemplate = fs.readFileSync(path.join(__dirname, '..', 'plan-release-template.yml.ejs'), {
-        encoding: 'utf8',
-      });
+      let publishTemplate = fs.readFileSync(
+        path.join(__dirname, '..', 'plan-release-template.yml.ejs'),
+        {
+          encoding: 'utf8',
+        }
+      );
 
       return ejs.render(publishTemplate, { pnpm: kind === 'pnpm' });
     }
 
-    it('adds both the workflow files for Release Plan PR and the actual release when no pnpm-lock.yaml exists', async function() {
+    it('adds both the workflow files for Release Plan PR and the actual release when no pnpm-lock.yaml exists', async function () {
       expect(fs.existsSync('.github/workflows/publish.yml')).toBeFalsy();
       expect(fs.existsSync('.github/workflows/plan-release.yml')).toBeFalsy();
 
       await exec(['--no-install', '--no-label-updates']);
 
-      expect(fs.readFileSync('.github/workflows/publish.yml', { encoding: 'utf8' })).toBe(expectedPublishWorkflowContents());
-      expect(fs.readFileSync('.github/workflows/plan-release.yml', { encoding: 'utf8' })).toBe(expectedPlanReleaseWorkflowContents());
+      expect(fs.readFileSync('.github/workflows/publish.yml', { encoding: 'utf8' })).toBe(
+        expectedPublishWorkflowContents()
+      );
+      expect(fs.readFileSync('.github/workflows/plan-release.yml', { encoding: 'utf8' })).toBe(
+        expectedPlanReleaseWorkflowContents()
+      );
     });
 
-    it('adds both the workflow files for Release Plan PR and the actual release when pnpm-lock.yaml exists', async function() {
+    it('adds both the workflow files for Release Plan PR and the actual release when pnpm-lock.yaml exists', async function () {
       fs.writeFileSync('pnpm-lock.yaml', '', { encoding: 'utf-8' });
       expect(fs.existsSync('.github/workflows/publish.yml')).toBeFalsy();
       expect(fs.existsSync('.github/workflows/plan-release.yml')).toBeFalsy();
 
       await exec(['--no-install', '--no-label-updates']);
 
-      expect(fs.readFileSync('.github/workflows/publish.yml', { encoding: 'utf8' })).toBe(expectedPublishWorkflowContents('pnpm'));
-      expect(fs.readFileSync('.github/workflows/plan-release.yml', { encoding: 'utf8' })).toBe(expectedPlanReleaseWorkflowContents('pnpm'));
+      expect(fs.readFileSync('.github/workflows/publish.yml', { encoding: 'utf8' })).toBe(
+        expectedPublishWorkflowContents('pnpm')
+      );
+      expect(fs.readFileSync('.github/workflows/plan-release.yml', { encoding: 'utf8' })).toBe(
+        expectedPlanReleaseWorkflowContents('pnpm')
+      );
     });
   });
 

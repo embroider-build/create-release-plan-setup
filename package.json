@@ -1,6 +1,6 @@
 {
   "name": "create-release-plan-setup",
-  "version": "4.0.0",
+  "version": "0.0.0",
   "description": "Simple npm init bin package to add the perfect release-plan setup",
   "keywords": [],
   "repository": "https://github.com/mansona/create-release-plan-setup",
@@ -10,11 +10,15 @@
   "bin": "bin/release-plan-setup.js",
   "files": [
     "bin/",
+    "lib/",
     "labels.json",
-    "release-template.md"
+    "release-template.md",
+    "plan-release-template.yml.ejs",
+    "publish-template.yml.ejs"
   ],
   "scripts": {
-    "lint:js": "eslint .",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "test": "vitest --no-threads"
   },
   "dependencies": {
@@ -30,12 +34,12 @@
     "which": "^3.0.0"
   },
   "devDependencies": {
-    "eslint": "^7.31.0",
-    "eslint-config-prettier": "^8.5.0",
+    "eslint": "^8.54.0",
+    "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-prettier": "^5.0.1",
     "fixturify-project": "^2.1.1",
-    "prettier": "^2.3.2",
+    "prettier": "^3.1.0",
     "release-plan": "^0.3.0",
     "vitest": "^0.34.6"
   },

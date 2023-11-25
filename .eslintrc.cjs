@@ -3,7 +3,7 @@ module.exports = {
   extends: ['eslint:recommended', 'plugin:node/recommended', 'prettier'],
   plugins: ['prettier', 'node'],
   parserOptions: {
-    ecmaVersion: 2022,
+    ecmaVersion: '2022',
     sourceType: 'module',
   },
   env: {
@@ -14,9 +14,9 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['__tests__/**/*.js'],
-      env: {
-        jest: true,
+      files: '**/*.test.js',
+      rules: {
+        'node/no-unpublished-import': 0,
       },
     },
   ],
