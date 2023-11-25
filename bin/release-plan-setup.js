@@ -132,8 +132,6 @@ try {
 
   let hasChangelog = fs.existsSync('CHANGELOG.md');
 
-  console.log({ hasChangelog });
-
   if (!hasChangelog && !labelsOnly) {
     fs.writeFileSync('CHANGELOG.md', '# Changelog\n', { encoding: 'utf8' });
   }
