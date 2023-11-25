@@ -1,14 +1,16 @@
-# create-rwjblue-release-it-setup
+# create-release-plan-setup
 
-Simple npm init / yarn create bin package to add release-it setup used by rwjblue.
+> This project is a fork of the excellent work in [create-rwjblue-release-it-setup](https://github.com/rwjblue/create-rwjblue-release-it-setup)
+
+Simple npm init bin package to add the perfect release-plan setup
 
 This will do the following:
 
-* add `release-it` config to the `package.json`
-* install required dependencies,
+* add `release-plan` dependency,
+* add required `.github/workflows` files
 * add a `CHANGELOG.md`
 * add a `RELEASE.md`
-* update your repository's labels with my "go to" defaults
+* update your repository's labels with sensible defaults
 
 ## Usage
 
@@ -25,14 +27,10 @@ This will do the following:
 
 ### Freshly Configuring a Repo
 
-When you want to set up a repo with `release-it`, you can run:
+When you want to set up a repo with `release-plan`, you can run:
 
 ```
-# in a yarn repo
-yarn create rwjblue-release-it-setup
-
-# in an npm repo
-npm init rwjblue-release-it-setup
+npm init release-plan-setup
 ```
 
 ### Updating an Already Configured Repo
@@ -40,11 +38,7 @@ npm init rwjblue-release-it-setup
 If you'd like to update an existing repo to use the latest and greatest setup, you can run:
 
 ```
-# in a yarn repo
-yarn create rwjblue-release-it-setup --update
-
-# in an npm repo
-npm init rwjblue-release-it-setup --update
+npm init release-plan-setup --update
 ```
 
 ### Only Sync Labels
@@ -52,11 +46,7 @@ npm init rwjblue-release-it-setup --update
 If you'd like to run only the label sync, you can do that with:
 
 ```
-# in a yarn repo
-yarn create rwjblue-release-it-setup --labels-only
-
-# in an npm repo
-npm init rwjblue-release-it-setup --labels-only
+npm init release-plan-setup --labels-only
 ```
 
 ## License

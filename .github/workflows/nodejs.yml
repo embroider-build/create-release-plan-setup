@@ -13,19 +13,17 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x, 16.x, 18.x]
+        node-version: [16.x, 18.x, 20.x]
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: volta-cli/action@v4
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
-        yarn-version: 1.22.4
     - name: Install pnpm
-      uses: pnpm/action-setup@v2.2.4
+      uses: pnpm/action-setup@v2
       with:
-        version: 6.32.3
-    - run: yarn install --frozen-lockfile
-    - run: yarn lint:js
-    - run: yarn test
+        version: 8
+    - run: pnpm install --frozen-lockfile
+    - run: pnpm lint:js
+    - run: pnpm test

@@ -1,29 +1,29 @@
 {
-  "name": "create-rwjblue-release-it-setup",
+  "name": "create-release-plan-setup",
   "version": "4.0.0",
-  "description": "Simple npm init / yarn create bin package to add release-it setup used by rwjblue",
+  "description": "Simple npm init bin package to add the perfect release-plan setup",
   "keywords": [],
-  "repository": "https://github.com/rwjblue/create-rwjblue-release-it-setup",
+  "repository": "https://github.com/mansona/create-release-plan-setup",
   "license": "MIT",
-  "author": "Robert Jackson <me@rwjblue.com>",
-  "main": "index.js",
-  "bin": "bin/rwjblue-release-it-setup.js",
+  "author": "Chris Manson <chris@manson.ie>",
+  "type": "module",
+  "bin": "bin/release-plan-setup.js",
   "files": [
     "bin/",
-    "index.js",
     "labels.json",
     "release-template.md"
   ],
   "scripts": {
     "lint:js": "eslint .",
-    "release": "release-it",
-    "test": "jest"
+    "test": "vitest --no-threads"
   },
   "dependencies": {
+    "ejs": "^3.1.9",
     "execa": "^5.1.1",
     "gitconfiglocal": "^2.1.0",
     "github-label-sync": "^1.6.0",
     "hosted-git-info": "^3.0.8",
+    "lodash.template": "^4.5.0",
     "mdast-util-from-markdown": "^0.8.5",
     "semver": "^7.3.5",
     "sort-package-json": "^1.50.0",
@@ -35,31 +35,11 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.4.0",
     "fixturify-project": "^2.1.1",
-    "jest": "^27.0.6",
     "prettier": "^2.3.2",
-    "release-it": "^15.5.0",
-    "@release-it-plugins/lerna-changelog": "^5.0.0",
-    "@release-it-plugins/workspaces": "^3.2.0"
+    "release-plan": "^0.3.0",
+    "vitest": "^0.34.6"
   },
   "engines": {
-    "node": "14.* || 16.* || >= 18"
-  },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
-  },
-  "release-it": {
-    "plugins": {
-      "@release-it-plugins/lerna-changelog": {
-        "infile": "CHANGELOG.md",
-        "launchEditor": true
-      }
-    },
-    "git": {
-      "tagName": "v${version}"
-    },
-    "github": {
-      "release": true,
-      "tokenRef": "GITHUB_AUTH"
-    }
+    "node": "16.* || 18.* || >= 20"
   }
 }
