@@ -1,4 +1,24 @@
 # Changelog
+## Release (2023-11-26)
+
+create-release-plan-setup 1.0.0 (major)
+
+#### :boom: Breaking Change
+* [#16](https://github.com/mansona/create-release-plan-setup/pull/16) update all dependencies ([@mansona](https://github.com/mansona))
+
+#### :rocket: Enhancement
+* [#19](https://github.com/mansona/create-release-plan-setup/pull/19) update plan when a PR is labeled ([@mansona](https://github.com/mansona))
+* [#15](https://github.com/mansona/create-release-plan-setup/pull/15) Update preview description ([@mansona](https://github.com/mansona))
+* [#13](https://github.com/mansona/create-release-plan-setup/pull/13) setup release-plan ([@mansona](https://github.com/mansona))
+
+#### :bug: Bug Fix
+* [#17](https://github.com/mansona/create-release-plan-setup/pull/17) Update more deps ([@mansona](https://github.com/mansona))
+
+#### :house: Internal
+* [#18](https://github.com/mansona/create-release-plan-setup/pull/18) add --singlePackage for CI ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
 
 
 ## v4.0.0 (2022-11-09)
