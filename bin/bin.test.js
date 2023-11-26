@@ -2,7 +2,7 @@
 import fs from 'fs';
 import path, { resolve } from 'path';
 import Project from 'fixturify-project';
-import execa from 'execa';
+import { execa } from 'execa';
 import ejs from 'ejs';
 
 import { expect, describe, beforeEach, afterEach, it } from 'vitest';
