@@ -2,7 +2,7 @@
 
 import fs from 'fs';
 import util from 'util';
-import execa from 'execa';
+import { execa } from 'execa';
 import sortPackageJson from 'sort-package-json';
 import gitconfiglocal from 'gitconfiglocal';
 import { fromMarkdown } from 'mdast-util-from-markdown';
