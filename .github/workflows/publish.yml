@@ -52,7 +52,7 @@ jobs:
           version: 8
       - run: pnpm install --frozen-lockfile
       - name: npm publish
-        run: pnpm release-plan publish
+        run: pnpm release-plan publish --singlePackage=create-release-plan-setup
       
         env:
           GITHUB_AUTH: ${{ secrets.GITHUB_TOKEN }}
