@@ -5,7 +5,7 @@ import util from 'util';
 import execa from 'execa';
 import sortPackageJson from 'sort-package-json';
 import gitconfiglocal from 'gitconfiglocal';
-import parseMarkdown from 'mdast-util-from-markdown';
+import { fromMarkdown } from 'mdast-util-from-markdown';
 import findRepoURL from '../lib/findRepoUrl.js';
 import getDependencyRange from '../lib/getDependencyRange.js';
 import ejs from 'ejs';
@@ -138,7 +138,7 @@ try {
 
   if (hasChangelog && update) {
     let changelogContent = fs.readFileSync('CHANGELOG.md', { encoding: 'utf8' });
-    let ast = parseMarkdown(changelogContent);
+    let ast = fromMarkdown(changelogContent);
 
     let hasH1 = ast.children.find((it) => it.type === 'heading' && it.depth === 1);
 
