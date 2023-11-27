@@ -27,7 +27,6 @@ jobs:
         # lerna-changelog can discover what's changed since the last release
         with:
           fetch-depth: 0
-          ref: 'main' # the release-plan should always run off main
       - uses: actions/setup-node@v4
         with:
           node-version: 18
@@ -60,7 +59,6 @@ jobs:
           author: "github-actions[bot] <github-actions-bot@users.noreply.github.com>"
           labels: "internal"
           branch: release-preview
-          base: main
           title: Prepare Release
           body: |
             This PR is a preview of the release that [release-plan](https://github.com/embroider-build/release-plan) has prepared. To release you should just merge this PR 👍
