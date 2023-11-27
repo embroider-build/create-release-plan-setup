@@ -18,6 +18,8 @@ jobs:
     timeout-minutes: 5
     outputs:
       explanation: ${{ steps.explanation.outputs.text }}
+    # only run on labeled event if the PR has already been merged
+    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.merged == true)
 
     steps:
       - uses: actions/checkout@v4
