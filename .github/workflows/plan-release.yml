@@ -8,7 +8,7 @@ on:
       - labeled
 
 concurrency:
-  group: plan-release-${{ github.head_ref || github.ref }}
+  group: plan-release # only the latest one of these should ever be running
   cancel-in-progress: true
 
 jobs:
