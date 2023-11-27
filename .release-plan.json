@@ -1,14 +1,10 @@
 {
   "solution": {
     "create-release-plan-setup": {
-      "impact": "major",
-      "oldVersion": "0.0.0",
-      "newVersion": "1.0.0",
+      "impact": "minor",
+      "oldVersion": "1.0.0",
+      "newVersion": "1.1.0",
       "constraints": [
-        {
-          "impact": "major",
-          "reason": "Appears in changelog section :boom: Breaking Change"
-        },
         {
           "impact": "minor",
           "reason": "Appears in changelog section :rocket: Enhancement"
@@ -25,5 +21,5 @@
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2023-11-26)\n\ncreate-release-plan-setup 1.0.0 (major)\n\n#### :boom: Breaking Change\n* [#16](https://github.com/mansona/create-release-plan-setup/pull/16) update all dependencies ([@mansona](https://github.com/mansona))\n\n#### :rocket: Enhancement\n* [#19](https://github.com/mansona/create-release-plan-setup/pull/19) update plan when a PR is labeled ([@mansona](https://github.com/mansona))\n* [#15](https://github.com/mansona/create-release-plan-setup/pull/15) Update preview description ([@mansona](https://github.com/mansona))\n* [#13](https://github.com/mansona/create-release-plan-setup/pull/13) setup release-plan ([@mansona](https://github.com/mansona))\n\n#### :bug: Bug Fix\n* [#17](https://github.com/mansona/create-release-plan-setup/pull/17) Update more deps ([@mansona](https://github.com/mansona))\n\n#### :house: Internal\n* [#18](https://github.com/mansona/create-release-plan-setup/pull/18) add --singlePackage for CI ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+  "description": "## Release (2023-11-27)\n\ncreate-release-plan-setup 1.1.0 (minor)\n\n#### :rocket: Enhancement\n* [#25](https://github.com/mansona/create-release-plan-setup/pull/25) update actions/checkout ([@mansona](https://github.com/mansona))\n* [#23](https://github.com/mansona/create-release-plan-setup/pull/23) only run the labeled event if PR has been merged already ([@mansona](https://github.com/mansona))\n* [#22](https://github.com/mansona/create-release-plan-setup/pull/22) update new PR name ([@mansona](https://github.com/mansona))\n\n#### :bug: Bug Fix\n* [#24](https://github.com/mansona/create-release-plan-setup/pull/24) make sure there is only ever one plan release job ([@mansona](https://github.com/mansona))\n\n#### :house: Internal\n* [#28](https://github.com/mansona/create-release-plan-setup/pull/28) revert specifying main branch ([@mansona](https://github.com/mansona))\n* [#27](https://github.com/mansona/create-release-plan-setup/pull/27) fix creation of release-plan PR ([@mansona](https://github.com/mansona))\n* [#26](https://github.com/mansona/create-release-plan-setup/pull/26) run plan-release job from main branch ([@mansona](https://github.com/mansona))\n* [#21](https://github.com/mansona/create-release-plan-setup/pull/21) Bump actions/checkout from 3 to 4 ([@dependabot[bot]](https://github.com/apps/dependabot))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
 }
