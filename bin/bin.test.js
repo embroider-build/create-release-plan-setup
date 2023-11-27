@@ -235,7 +235,7 @@ describe('main binary', function () {
         encoding: 'utf8',
       });
 
-      const planReleaseReplacementValue = `https://github.com/someuser/some-repo/pulls?q=is%3Apr+is%3Aopen+%22Plan+Release%22+in%3Atitle`;
+      const planReleaseReplacementValue = `https://github.com/someuser/some-repo/pulls?q=is%3Apr+is%3Aopen+%22Prepare+Release%22+in%3Atitle`;
 
       return releaseContents.replace('{{PLAN_RELEASE_PR}}', planReleaseReplacementValue);
     }
