@@ -181,7 +181,7 @@ try {
 
     const repoUrl = findRepoURL(pkg);
 
-    let planReleaseReplacementValue = `https://github.com/${repoUrl}/pulls?q=is%3Apr+is%3Aopen+%22Plan+Release%22+in%3Atitle`;
+    let planReleaseReplacementValue = `https://github.com/${repoUrl}/pulls?q=is%3Apr+is%3Aopen+%22Prepare+Release%22+in%3Atitle`;
 
     fs.writeFileSync(
       'RELEASE.md',
