@@ -1,4 +1,24 @@
 # Changelog
+## Release (2023-11-27)
+
+create-release-plan-setup 1.1.0 (minor)
+
+#### :rocket: Enhancement
+* [#25](https://github.com/mansona/create-release-plan-setup/pull/25) update actions/checkout ([@mansona](https://github.com/mansona))
+* [#23](https://github.com/mansona/create-release-plan-setup/pull/23) only run the labeled event if PR has been merged already ([@mansona](https://github.com/mansona))
+* [#22](https://github.com/mansona/create-release-plan-setup/pull/22) update new PR name ([@mansona](https://github.com/mansona))
+
+#### :bug: Bug Fix
+* [#24](https://github.com/mansona/create-release-plan-setup/pull/24) make sure there is only ever one plan release job ([@mansona](https://github.com/mansona))
+
+#### :house: Internal
+* [#28](https://github.com/mansona/create-release-plan-setup/pull/28) revert specifying main branch ([@mansona](https://github.com/mansona))
+* [#27](https://github.com/mansona/create-release-plan-setup/pull/27) fix creation of release-plan PR ([@mansona](https://github.com/mansona))
+* [#26](https://github.com/mansona/create-release-plan-setup/pull/26) run plan-release job from main branch ([@mansona](https://github.com/mansona))
+* [#21](https://github.com/mansona/create-release-plan-setup/pull/21) Bump actions/checkout from 3 to 4 ([@dependabot[bot]](https://github.com/apps/dependabot))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
 ## Release (2023-11-26)
 
 create-release-plan-setup 1.0.0 (major)
