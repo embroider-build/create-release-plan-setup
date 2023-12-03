@@ -2,24 +2,16 @@
   "solution": {
     "create-release-plan-setup": {
       "impact": "minor",
-      "oldVersion": "1.0.0",
-      "newVersion": "1.1.0",
+      "oldVersion": "1.1.0",
+      "newVersion": "1.2.0",
       "constraints": [
         {
           "impact": "minor",
           "reason": "Appears in changelog section :rocket: Enhancement"
-        },
-        {
-          "impact": "patch",
-          "reason": "Appears in changelog section :bug: Bug Fix"
-        },
-        {
-          "impact": "patch",
-          "reason": "Appears in changelog section :house: Internal"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2023-11-27)\n\ncreate-release-plan-setup 1.1.0 (minor)\n\n#### :rocket: Enhancement\n* [#25](https://github.com/mansona/create-release-plan-setup/pull/25) update actions/checkout ([@mansona](https://github.com/mansona))\n* [#23](https://github.com/mansona/create-release-plan-setup/pull/23) only run the labeled event if PR has been merged already ([@mansona](https://github.com/mansona))\n* [#22](https://github.com/mansona/create-release-plan-setup/pull/22) update new PR name ([@mansona](https://github.com/mansona))\n\n#### :bug: Bug Fix\n* [#24](https://github.com/mansona/create-release-plan-setup/pull/24) make sure there is only ever one plan release job ([@mansona](https://github.com/mansona))\n\n#### :house: Internal\n* [#28](https://github.com/mansona/create-release-plan-setup/pull/28) revert specifying main branch ([@mansona](https://github.com/mansona))\n* [#27](https://github.com/mansona/create-release-plan-setup/pull/27) fix creation of release-plan PR ([@mansona](https://github.com/mansona))\n* [#26](https://github.com/mansona/create-release-plan-setup/pull/26) run plan-release job from main branch ([@mansona](https://github.com/mansona))\n* [#21](https://github.com/mansona/create-release-plan-setup/pull/21) Bump actions/checkout from 3 to 4 ([@dependabot[bot]](https://github.com/apps/dependabot))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+  "description": "## Release (2023-12-03)\n\ncreate-release-plan-setup 1.2.0 (minor)\n\n#### :rocket: Enhancement\n* [#31](https://github.com/mansona/create-release-plan-setup/pull/31) don't create a new release plan PR when releasing ([@mansona](https://github.com/mansona))\n* [#30](https://github.com/mansona/create-release-plan-setup/pull/30) read the default branch from remote ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
 }
