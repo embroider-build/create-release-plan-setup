@@ -1,4 +1,14 @@
 # Changelog
+## Release (2023-12-03)
+
+create-release-plan-setup 1.2.0 (minor)
+
+#### :rocket: Enhancement
+* [#31](https://github.com/mansona/create-release-plan-setup/pull/31) don't create a new release plan PR when releasing ([@mansona](https://github.com/mansona))
+* [#30](https://github.com/mansona/create-release-plan-setup/pull/30) read the default branch from remote ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
 ## Release (2023-11-27)
 
 create-release-plan-setup 1.1.0 (minor)
