@@ -85,7 +85,7 @@ describe('main binary', function () {
   precomposeunicode = true
 
 [remote "origin"]
-  url = git@github.com:someuser/some-repo.git
+  url = git@github.com:mansona/create-release-plan-setup.git
   fetch = +refs/heads/*:refs/remotes/origin/*`,
       };
 
@@ -105,7 +105,7 @@ describe('main binary', function () {
           name: 'some-thing-cool',
           repository: {
             type: 'git',
-            url: 'git@github.com:someuser/some-repo.git',
+            url: 'git@github.com:mansona/create-release-plan-setup.git',
           },
           version: '0.1.0',
         },
@@ -119,7 +119,7 @@ describe('main binary', function () {
           "name": "some-thing-cool",
           "repository": {
             "type": "git",
-            "url": "git@github.com:someuser/some-repo.git",
+            "url": "git@github.com:mansona/create-release-plan-setup.git",
           },
           "version": "0.1.0",
         }
@@ -166,7 +166,7 @@ describe('main binary', function () {
   });
 
   describe('workflow files', function () {
-    function expectedPublishWorkflowContents(kind = 'npm') {
+    function expectedPublishWorkflowContents(kind = 'npm', defaultBranch = 'main') {
       let publishTemplate = fs.readFileSync(
         path.join(__dirname, '..', 'publish-template.yml.ejs'),
         {
@@ -174,7 +174,7 @@ describe('main binary', function () {
         }
       );
 
-      return ejs.render(publishTemplate, { pnpm: kind === 'pnpm' });
+      return ejs.render(publishTemplate, { pnpm: kind === 'pnpm', defaultBranch });
     }
 
     function expectedPlanReleaseWorkflowContents(kind = 'npm') {
@@ -223,7 +223,7 @@ describe('main binary', function () {
       project.files['.git'] = {
         config: `
 [remote "origin"]
-  url = git@github.com:someuser/some-repo.git
+  url = git@github.com:mansona/create-release-plan-setup.git
   fetch = +refs/heads/*:refs/remotes/origin/*`,
       };
 
@@ -235,7 +235,7 @@ describe('main binary', function () {
         encoding: 'utf8',
       });
 
-      const planReleaseReplacementValue = `https://github.com/someuser/some-repo/pulls?q=is%3Apr+is%3Aopen+%22Prepare+Release%22+in%3Atitle`;
+      const planReleaseReplacementValue = `https://github.com/mansona/create-release-plan-setup/pulls?q=is%3Apr+is%3Aopen+%22Prepare+Release%22+in%3Atitle`;
 
       return releaseContents.replace('{{PLAN_RELEASE_PR}}', planReleaseReplacementValue);
     }

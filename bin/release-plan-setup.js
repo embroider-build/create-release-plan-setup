@@ -29,6 +29,19 @@ const update = process.argv.includes('--update');
 
 const DETECT_TRAILING_WHITESPACE = /\s+$/;
 
+async function getOriginRemoteUrl() {
+  try {
+    let config = await gitconfig(process.cwd());
+    return config.remote?.origin?.url;
+  } catch (err) {
+    if (err.message.includes('no gitconfig to be found')) {
+      return;
+    }
+
+    throw err;
+  }
+}
+
 async function updatePackageJSON() {
   let contents = fs.readFileSync('package.json', { encoding: 'utf8' });
   let trailingWhitespace = DETECT_TRAILING_WHITESPACE.exec(contents);
@@ -39,20 +52,13 @@ async function updatePackageJSON() {
   }
 
   if (!findRepoURL(pkg)) {
-    try {
-      let config = await gitconfig(process.cwd());
-      let originRemoteUrl = config.remote && config.remote.origin && config.remote.origin.url;
+    const originRemoteUrl = await getOriginRemoteUrl();
 
-      if (originRemoteUrl) {
-        pkg.repository = {
-          type: 'git',
-          url: originRemoteUrl,
-        };
-      }
-    } catch (error) {
-      if (!error.message.includes('no gitconfig to be found')) {
-        throw error;
-      }
+    if (originRemoteUrl) {
+      pkg.repository = {
+        type: 'git',
+        url: originRemoteUrl,
+      };
     }
   }
 
@@ -104,6 +110,23 @@ function isYarn() {
 
 function isPnpm() {
   return fs.existsSync('pnpm-lock.yaml');
+}
+
+async function getDefaultBranch() {
+  const originRemoteUrl = await getOriginRemoteUrl();
+
+  if (!originRemoteUrl) {
+    return 'main';
+  }
+
+  try {
+    const result = await execa('git', ['ls-remote', '--symref', originRemoteUrl, 'HEAD']);
+    const [, defaultBranch] = /ref: refs\/heads\/([^\s]+)\s+HEAD/.exec(result.stdout);
+    return defaultBranch;
+  } catch (err) {
+    console.warn(`Could not get default branch: ${err.message}`);
+    return 'main';
+  }
 }
 
 async function installDependencies() {
@@ -165,7 +188,7 @@ try {
 
     fs.writeFileSync(
       '.github/workflows/publish.yml',
-      ejs.render(publishContents, { pnpm: isPnpm() }),
+      ejs.render(publishContents, { pnpm: isPnpm(), defaultBranch: await getDefaultBranch() }),
       { encoding: 'utf8' }
     );
     fs.writeFileSync(
