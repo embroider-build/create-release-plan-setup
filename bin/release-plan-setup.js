@@ -119,9 +119,14 @@ async function getDefaultBranch() {
     return 'main';
   }
 
-  const result = await execa('git', ['ls-remote', '--symref', originRemoteUrl, 'HEAD']);
-  const [, defaultBranch] = /ref: refs\/heads\/([^\s]+)\s+HEAD/.exec(result.stdout);
-  return defaultBranch;
+  try {
+    const result = await execa('git', ['ls-remote', '--symref', originRemoteUrl, 'HEAD']);
+    const [, defaultBranch] = /ref: refs\/heads\/([^\s]+)\s+HEAD/.exec(result.stdout);
+    return defaultBranch;
+  } catch (err) {
+    console.warn(`Could not get default branch: ${err.message}`);
+    return 'main';
+  }
 }
 
 async function installDependencies() {
