@@ -177,7 +177,7 @@ describe('main binary', function () {
       return ejs.render(publishTemplate, { pnpm: kind === 'pnpm', defaultBranch });
     }
 
-    function expectedPlanReleaseWorkflowContents(kind = 'npm') {
+    function expectedPlanReleaseWorkflowContents(kind = 'npm', defaultBranch = 'main') {
       let publishTemplate = fs.readFileSync(
         path.join(__dirname, '..', 'plan-release-template.yml.ejs'),
         {
@@ -185,7 +185,7 @@ describe('main binary', function () {
         }
       );
 
-      return ejs.render(publishTemplate, { pnpm: kind === 'pnpm' });
+      return ejs.render(publishTemplate, { pnpm: kind === 'pnpm', defaultBranch });
     }
 
     it('adds both the workflow files for Release Plan PR and the actual release when no pnpm-lock.yaml exists', async function () {
