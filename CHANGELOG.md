@@ -1,4 +1,16 @@
 # Changelog
+## Release (2023-12-04)
+
+create-release-plan-setup 1.3.0 (minor)
+
+#### :rocket: Enhancement
+* [#34](https://github.com/mansona/create-release-plan-setup/pull/34) add discovered default branch to plan-release CI ([@mansona](https://github.com/mansona))
+
+#### :house: Internal
+* [#36](https://github.com/mansona/create-release-plan-setup/pull/36) batch dependabot updates for minor or patch dev deps ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
 ## Release (2023-12-03)
 
 create-release-plan-setup 1.2.0 (minor)
