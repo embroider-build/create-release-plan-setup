@@ -186,14 +186,16 @@ try {
 
     await mkdir('.github/workflows', { recursive: true });
 
+    const defaultBranch = await getDefaultBranch();
+
     fs.writeFileSync(
       '.github/workflows/publish.yml',
-      ejs.render(publishContents, { pnpm: isPnpm(), defaultBranch: await getDefaultBranch() }),
+      ejs.render(publishContents, { pnpm: isPnpm(), defaultBranch }),
       { encoding: 'utf8' }
     );
     fs.writeFileSync(
       '.github/workflows/plan-release.yml',
-      ejs.render(planReleaseContents, { pnpm: isPnpm() }),
+      ejs.render(planReleaseContents, { pnpm: isPnpm(), defaultBranch }),
       { encoding: 'utf8' }
     );
   }
