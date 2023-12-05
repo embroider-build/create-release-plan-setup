@@ -19,7 +19,7 @@
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "test": "vitest --no-threads"
+    "test": "vitest --pool=forks"
   },
   "dependencies": {
     "ejs": "^3.1.9",
