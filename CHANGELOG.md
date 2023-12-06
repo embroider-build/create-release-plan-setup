@@ -1,4 +1,14 @@
 # Changelog
+## Release (2023-12-06)
+
+create-release-plan-setup 1.4.0 (minor)
+
+#### :rocket: Enhancement
+* `create-release-plan-setup`
+  * [#40](https://github.com/mansona/create-release-plan-setup/pull/40) update release-plan ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
 ## Release (2023-12-05)
 
 create-release-plan-setup 1.3.1 (patch)
