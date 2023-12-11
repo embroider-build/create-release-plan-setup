@@ -39,9 +39,9 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^5.0.1",
     "fixturify-project": "^2.1.1",
-    "prettier": "^3.1.0",
-    "release-plan": "^0.5.0",
-    "vitest": "^1.0.0"
+    "prettier": "^3.1.1",
+    "release-plan": "^0.5.1",
+    "vitest": "^1.0.4"
   },
   "engines": {
     "node": "16.* || 18.* || >= 20"
