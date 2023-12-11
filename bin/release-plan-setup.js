@@ -62,12 +62,11 @@ async function updatePackageJSON() {
     }
   }
 
+  pkg.devDependencies ||= {};
   pkg.devDependencies['release-plan'] = getDependencyRange(
     pkg.devDependencies['release-plan'],
     RELEASE_PLAN_VERSION
   );
-
-  pkg.devDependencies = pkg.devDependencies || {};
 
   let sortedPkg = sortPackageJson(pkg);
   let updatedContents = JSON.stringify(sortedPkg, null, 2);
