@@ -1,4 +1,14 @@
 # Changelog
+## Release (2023-12-11)
+
+create-release-plan-setup 1.4.1 (patch)
+
+#### :bug: Bug Fix
+* `create-release-plan-setup`
+  * [#44](https://github.com/mansona/create-release-plan-setup/pull/44) Fix checking devDependencies on early projects with mostly empty package.json ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### Committers: 1
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
 ## Release (2023-12-06)
 
 create-release-plan-setup 1.4.0 (minor)
