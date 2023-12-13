@@ -2,16 +2,16 @@
   "solution": {
     "create-release-plan-setup": {
       "impact": "patch",
-      "oldVersion": "1.4.0",
-      "newVersion": "1.4.1",
+      "oldVersion": "1.4.1",
+      "newVersion": "1.4.2",
       "constraints": [
         {
           "impact": "patch",
-          "reason": "Appears in changelog section :bug: Bug Fix"
+          "reason": "Appears in changelog section :house: Internal"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2023-12-11)\n\ncreate-release-plan-setup 1.4.1 (patch)\n\n#### :bug: Bug Fix\n* `create-release-plan-setup`\n  * [#44](https://github.com/mansona/create-release-plan-setup/pull/44) Fix checking devDependencies on early projects with mostly empty package.json ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 1\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
+  "description": "## Release (2023-12-13)\n\ncreate-release-plan-setup 1.4.2 (patch)\n\n#### :house: Internal\n* `create-release-plan-setup`\n  * [#46](https://github.com/mansona/create-release-plan-setup/pull/46) update release-plan ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
 }
