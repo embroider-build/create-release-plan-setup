@@ -1,4 +1,14 @@
 # Changelog
+## Release (2023-12-13)
+
+create-release-plan-setup 1.4.2 (patch)
+
+#### :house: Internal
+* `create-release-plan-setup`
+  * [#46](https://github.com/mansona/create-release-plan-setup/pull/46) update release-plan ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
 ## Release (2023-12-11)
 
 create-release-plan-setup 1.4.1 (patch)
