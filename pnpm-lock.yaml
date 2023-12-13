@@ -56,8 +56,8 @@ devDependencies:
     specifier: ^3.1.1
     version: 3.1.1
   release-plan:
-    specifier: ^0.5.1
-    version: 0.5.1
+    specifier: ^0.6.0
+    version: 0.6.0
   vitest:
     specifier: ^1.0.4
     version: 1.0.4
@@ -3326,8 +3326,8 @@ packages:
       rc: 1.2.8
     dev: true
 
-  /release-plan@0.5.1:
-    resolution: {integrity: sha512-3GebglBmiCXjkUYETOvWhKttpyufDn+khkW/DAuCRA3dUwbRA/f7Yd5r37kluOgeJ+FSSWM0lYyoYCqV+UKB8Q==}
+  /release-plan@0.6.0:
+    resolution: {integrity: sha512-5c4JdHXPtVDEbC/aNCaTAr+NrVm1NST3rCFSVkdGInXfJ8KLPFWBZ9/AtIniTRb+E6vjJwy33N9DTnuW76iRpQ==}
     hasBin: true
     dependencies:
       '@ef4/lerna-changelog': 2.0.0
