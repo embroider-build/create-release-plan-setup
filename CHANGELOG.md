@@ -1,4 +1,19 @@
 # Changelog
+## Release (2024-01-05)
+
+create-release-plan-setup 2.0.0 (major)
+
+#### :boom: Breaking Change
+* `create-release-plan-setup`
+  * [#56](https://github.com/mansona/create-release-plan-setup/pull/56) always update existing files ([@mansona](https://github.com/mansona))
+
+#### :rocket: Enhancement
+* `create-release-plan-setup`
+  * [#53](https://github.com/mansona/create-release-plan-setup/pull/53) Add explicit permissions to the generated workflow files ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### Committers: 2
+- Chris Manson ([@mansona](https://github.com/mansona))
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
 ## Release (2023-12-13)
 
 create-release-plan-setup 1.4.2 (patch)
