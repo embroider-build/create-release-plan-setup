@@ -38,7 +38,7 @@ npm init release-plan-setup
 If you'd like to update an existing repo to use the latest and greatest setup, you can run:
 
 ```
-npm init release-plan-setup --update
+npm init release-plan-setup@latest
 ```
 
 ### Only Sync Labels

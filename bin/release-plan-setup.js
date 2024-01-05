@@ -25,7 +25,6 @@ const gitconfig = util.promisify(gitconfiglocal);
 const skipInstall = process.argv.includes('--no-install');
 const skipLabels = process.argv.includes('--no-label-updates');
 const labelsOnly = process.argv.includes('--labels-only');
-const update = process.argv.includes('--update');
 
 const DETECT_TRAILING_WHITESPACE = /\s+$/;
 
@@ -158,7 +157,7 @@ try {
     fs.writeFileSync('CHANGELOG.md', '# Changelog\n', { encoding: 'utf8' });
   }
 
-  if (hasChangelog && update) {
+  if (hasChangelog && !labelsOnly) {
     let changelogContent = fs.readFileSync('CHANGELOG.md', { encoding: 'utf8' });
     let ast = fromMarkdown(changelogContent);
 
@@ -173,7 +172,7 @@ try {
 
   let pkg = await updatePackageJSON();
 
-  if ((!fs.existsSync('.github/workflows/publish.yml') || update) && !labelsOnly) {
+  if (!labelsOnly) {
     let publishContents = fs.readFileSync(
       new URL('../publish-template.yml.ejs', import.meta.url),
       'utf8'
@@ -199,7 +198,7 @@ try {
     );
   }
 
-  if ((!fs.existsSync('RELEASE.md') || update) && !labelsOnly) {
+  if (!labelsOnly) {
     const anotherFile = new URL('../release-template.md', import.meta.url);
     let releaseContents = fs.readFileSync(anotherFile, 'utf8');
 
