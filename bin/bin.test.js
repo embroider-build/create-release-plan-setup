@@ -248,7 +248,7 @@ describe('main binary', function () {
       expect(fs.readFileSync('RELEASE.md', { encoding: 'utf8' })).toBe(expectedReleaseContents());
     });
 
-    describe('--update', function () {
+    describe('update files', function () {
       beforeEach(async function () {
         await exec(['--no-install', '--no-label-updates']);
       });
@@ -256,7 +256,7 @@ describe('main binary', function () {
       it('updates RELEASE.md', async function () {
         fs.writeFileSync('RELEASE.md', 'lololol', 'utf8');
 
-        await exec(['--no-install', '--no-label-updates', '--update']);
+        await exec(['--no-install', '--no-label-updates']);
 
         expect(fs.readFileSync('RELEASE.md', { encoding: 'utf8' })).toBe(expectedReleaseContents());
       });
@@ -265,7 +265,7 @@ describe('main binary', function () {
         project.files['CHANGELOG.md'] = `## v1.2.0\n* Foo bar`;
         project.writeSync();
 
-        await exec(['--no-install', '--no-label-updates', '--update']);
+        await exec(['--no-install', '--no-label-updates']);
 
         expect(fs.readFileSync('CHANGELOG.md', { encoding: 'utf8' })).toBe(
           '# Changelog\n\n## v1.2.0\n* Foo bar'
