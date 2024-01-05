@@ -1,17 +1,21 @@
 {
   "solution": {
     "create-release-plan-setup": {
-      "impact": "patch",
-      "oldVersion": "1.4.1",
-      "newVersion": "1.4.2",
+      "impact": "major",
+      "oldVersion": "1.4.2",
+      "newVersion": "2.0.0",
       "constraints": [
         {
-          "impact": "patch",
-          "reason": "Appears in changelog section :house: Internal"
+          "impact": "major",
+          "reason": "Appears in changelog section :boom: Breaking Change"
+        },
+        {
+          "impact": "minor",
+          "reason": "Appears in changelog section :rocket: Enhancement"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2023-12-13)\n\ncreate-release-plan-setup 1.4.2 (patch)\n\n#### :house: Internal\n* `create-release-plan-setup`\n  * [#46](https://github.com/mansona/create-release-plan-setup/pull/46) update release-plan ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+  "description": "## Release (2024-01-05)\n\ncreate-release-plan-setup 2.0.0 (major)\n\n#### :boom: Breaking Change\n* `create-release-plan-setup`\n  * [#56](https://github.com/mansona/create-release-plan-setup/pull/56) always update existing files ([@mansona](https://github.com/mansona))\n\n#### :rocket: Enhancement\n* `create-release-plan-setup`\n  * [#53](https://github.com/mansona/create-release-plan-setup/pull/53) Add explicit permissions to the generated workflow files ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 2\n- Chris Manson ([@mansona](https://github.com/mansona))\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
 }
