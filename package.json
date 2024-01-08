@@ -34,14 +34,14 @@
     "which": "^4.0.0"
   },
   "devDependencies": {
-    "eslint": "^8.55.0",
+    "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-prettier": "^5.1.2",
     "fixturify-project": "^2.1.1",
     "prettier": "^3.1.1",
     "release-plan": "^0.6.0",
-    "vitest": "^1.0.4"
+    "vitest": "^1.1.3"
   },
   "engines": {
     "node": "16.* || 18.* || >= 20"
