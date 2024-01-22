@@ -5,7 +5,6 @@ import util from 'util';
 import { execa } from 'execa';
 import sortPackageJson from 'sort-package-json';
 import gitconfiglocal from 'gitconfiglocal';
-import { fromMarkdown } from 'mdast-util-from-markdown';
 import findRepoURL from '../lib/findRepoUrl.js';
 import getDependencyRange from '../lib/getDependencyRange.js';
 import ejs from 'ejs';
@@ -158,13 +157,11 @@ try {
   }
 
   if (hasChangelog && !labelsOnly) {
-    let changelogContent = fs.readFileSync('CHANGELOG.md', { encoding: 'utf8' });
-    let ast = fromMarkdown(changelogContent);
+    let changelogContent = fs.readFileSync('CHANGELOG.md', { encoding: 'utf8' }).split('\n');
+    const changelogPreamblePattern = /#.*Changelog.*$/i;
 
-    let hasH1 = ast.children.find((it) => it.type === 'heading' && it.depth === 1);
-
-    if (!hasH1) {
-      fs.writeFileSync('CHANGELOG.md', `# Changelog\n\n${changelogContent}`, {
+    if (!changelogPreamblePattern.test(changelogContent[0])) {
+      fs.writeFileSync('CHANGELOG.md', `# Changelog\n\n${changelogContent.join('\n')}`, {
         encoding: 'utf8',
       });
     }
