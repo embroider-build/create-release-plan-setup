@@ -1,4 +1,25 @@
 # Changelog
+
+## Release (2024-02-06)
+
+create-release-plan-setup 2.1.0 (minor)
+
+#### :rocket: Enhancement
+* `create-release-plan-setup`
+  * [#71](https://github.com/mansona/create-release-plan-setup/pull/71) run create-release-plan-setup ([@mansona](https://github.com/mansona))
+  * [#69](https://github.com/mansona/create-release-plan-setup/pull/69) update release-plan ([@mansona](https://github.com/mansona))
+  * [#68](https://github.com/mansona/create-release-plan-setup/pull/68) Update peter-evans/create-pull-request ([@mansona](https://github.com/mansona))
+
+#### :bug: Bug Fix
+* `create-release-plan-setup`
+  * [#60](https://github.com/mansona/create-release-plan-setup/pull/60) match release-plan test for Changelog header ([@mansona](https://github.com/mansona))
+
+#### :house: Internal
+* `create-release-plan-setup`
+  * [#67](https://github.com/mansona/create-release-plan-setup/pull/67) add an editorconfig file ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
 ## Release (2024-01-05)
 
 create-release-plan-setup 2.0.0 (major)
