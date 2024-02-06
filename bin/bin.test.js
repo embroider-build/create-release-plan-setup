@@ -72,6 +72,18 @@ describe('main binary', function () {
     );
   });
 
+  it('does not modify if an existing prefix exists anywhere on the line and has different casing in CHANGELOG.md', async function () {
+    project.files['CHANGELOG.md'] =
+      `# the most mighty CHANgELOG you have ever seen\n\n## v1.2.0\n* Foo bar`;
+    project.writeSync();
+
+    await exec(['--no-install', '--no-label-updates']);
+
+    expect(fs.readFileSync('CHANGELOG.md', { encoding: 'utf8' })).toBe(
+      '# the most mighty CHANgELOG you have ever seen\n\n## v1.2.0\n* Foo bar'
+    );
+  });
+
   describe('package.json', function () {
     it('adds repository info when discoverable from `.git/config`', async function () {
       project.files['.git'] = {
