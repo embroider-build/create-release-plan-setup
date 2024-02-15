@@ -1,25 +1,21 @@
 {
   "solution": {
     "create-release-plan-setup": {
-      "impact": "minor",
-      "oldVersion": "2.0.0",
-      "newVersion": "2.1.0",
+      "impact": "patch",
+      "oldVersion": "2.1.0",
+      "newVersion": "2.1.1",
       "constraints": [
-        {
-          "impact": "minor",
-          "reason": "Appears in changelog section :rocket: Enhancement"
-        },
         {
           "impact": "patch",
           "reason": "Appears in changelog section :bug: Bug Fix"
         },
         {
           "impact": "patch",
-          "reason": "Appears in changelog section :house: Internal"
+          "reason": "Appears in changelog section :memo: Documentation"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2024-02-06)\n\ncreate-release-plan-setup 2.1.0 (minor)\n\n#### :rocket: Enhancement\n* `create-release-plan-setup`\n  * [#71](https://github.com/mansona/create-release-plan-setup/pull/71) run create-release-plan-setup ([@mansona](https://github.com/mansona))\n  * [#69](https://github.com/mansona/create-release-plan-setup/pull/69) update release-plan ([@mansona](https://github.com/mansona))\n  * [#68](https://github.com/mansona/create-release-plan-setup/pull/68) Update peter-evans/create-pull-request ([@mansona](https://github.com/mansona))\n\n#### :bug: Bug Fix\n* `create-release-plan-setup`\n  * [#60](https://github.com/mansona/create-release-plan-setup/pull/60) match release-plan test for Changelog header ([@mansona](https://github.com/mansona))\n\n#### :house: Internal\n* `create-release-plan-setup`\n  * [#67](https://github.com/mansona/create-release-plan-setup/pull/67) add an editorconfig file ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+  "description": "## Release (2024-02-15)\n\ncreate-release-plan-setup 2.1.1 (patch)\n\n#### :bug: Bug Fix\n* `create-release-plan-setup`\n  * [#74](https://github.com/mansona/create-release-plan-setup/pull/74) Fix typo ([@RobbieTheWagner](https://github.com/RobbieTheWagner))\n\n#### :memo: Documentation\n* `create-release-plan-setup`\n  * [#76](https://github.com/mansona/create-release-plan-setup/pull/76) update setup docs in the readme ([@mansona](https://github.com/mansona))\n\n#### Committers: 2\n- Chris Manson ([@mansona](https://github.com/mansona))\n- Robbie Wagner ([@RobbieTheWagner](https://github.com/RobbieTheWagner))\n"
 }

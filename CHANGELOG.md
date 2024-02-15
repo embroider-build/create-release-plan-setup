@@ -1,5 +1,21 @@
 # Changelog
 
+## Release (2024-02-15)
+
+create-release-plan-setup 2.1.1 (patch)
+
+#### :bug: Bug Fix
+* `create-release-plan-setup`
+  * [#74](https://github.com/mansona/create-release-plan-setup/pull/74) Fix typo ([@RobbieTheWagner](https://github.com/RobbieTheWagner))
+
+#### :memo: Documentation
+* `create-release-plan-setup`
+  * [#76](https://github.com/mansona/create-release-plan-setup/pull/76) update setup docs in the readme ([@mansona](https://github.com/mansona))
+
+#### Committers: 2
+- Chris Manson ([@mansona](https://github.com/mansona))
+- Robbie Wagner ([@RobbieTheWagner](https://github.com/RobbieTheWagner))
+
 ## Release (2024-02-06)
 
 create-release-plan-setup 2.1.0 (minor)
