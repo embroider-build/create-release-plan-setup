@@ -64,15 +64,22 @@ jobs:
       - name: "Generate Explanation and Prep Changelogs"
         id: explanation
         run: |
-          set -x
+          set +e
           <% if (pnpm) { %>
-          pnpm release-plan prepare
+          pnpm release-plan prepare 2> >(tee -a stderr.log >&2)
           <% } else { %>
-          npx release-plan prepare
+          npx release-plan prepare 2> >(tee -a stderr.log >&2)
           <% } %>
-          echo 'text<<EOF' >> $GITHUB_OUTPUT
-          jq .description .release-plan.json -r >> $GITHUB_OUTPUT
-          echo 'EOF' >> $GITHUB_OUTPUT
+
+          if [ $? -ne 0 ]; then
+            echo 'text<<EOF' >> $GITHUB_OUTPUT
+            cat stderr.log >> $GITHUB_OUTPUT
+            echo 'EOF' >> $GITHUB_OUTPUT
+          else
+            echo 'text<<EOF' >> $GITHUB_OUTPUT
+            jq .description .release-plan.json -r >> $GITHUB_OUTPUT
+            echo 'EOF' >> $GITHUB_OUTPUT
+          fi
         env:
           GITHUB_AUTH: ${{ secrets.GITHUB_TOKEN }}
 
