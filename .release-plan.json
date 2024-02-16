@@ -1,21 +1,25 @@
 {
   "solution": {
     "create-release-plan-setup": {
-      "impact": "patch",
-      "oldVersion": "2.1.0",
-      "newVersion": "2.1.1",
+      "impact": "minor",
+      "oldVersion": "2.1.1",
+      "newVersion": "2.2.0",
       "constraints": [
+        {
+          "impact": "minor",
+          "reason": "Appears in changelog section :rocket: Enhancement"
+        },
         {
           "impact": "patch",
           "reason": "Appears in changelog section :bug: Bug Fix"
         },
         {
           "impact": "patch",
-          "reason": "Appears in changelog section :memo: Documentation"
+          "reason": "Appears in changelog section :house: Internal"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2024-02-15)\n\ncreate-release-plan-setup 2.1.1 (patch)\n\n#### :bug: Bug Fix\n* `create-release-plan-setup`\n  * [#74](https://github.com/mansona/create-release-plan-setup/pull/74) Fix typo ([@RobbieTheWagner](https://github.com/RobbieTheWagner))\n\n#### :memo: Documentation\n* `create-release-plan-setup`\n  * [#76](https://github.com/mansona/create-release-plan-setup/pull/76) update setup docs in the readme ([@mansona](https://github.com/mansona))\n\n#### Committers: 2\n- Chris Manson ([@mansona](https://github.com/mansona))\n- Robbie Wagner ([@RobbieTheWagner](https://github.com/RobbieTheWagner))\n"
+  "description": "## Release (2024-02-16)\n\ncreate-release-plan-setup 2.2.0 (minor)\n\n#### :rocket: Enhancement\n* `create-release-plan-setup`\n  * [#81](https://github.com/mansona/create-release-plan-setup/pull/81) update pnpm/action-setup in template ([@mansona](https://github.com/mansona))\n  * [#80](https://github.com/mansona/create-release-plan-setup/pull/80) update release-plan ([@mansona](https://github.com/mansona))\n  * [#78](https://github.com/mansona/create-release-plan-setup/pull/78) Show unlabelled ([@mansona](https://github.com/mansona))\n\n#### :bug: Bug Fix\n* `create-release-plan-setup`\n  * [#77](https://github.com/mansona/create-release-plan-setup/pull/77) fix the branch used when a PR is labelled ([@mansona](https://github.com/mansona))\n\n#### :house: Internal\n* `create-release-plan-setup`\n  * [#82](https://github.com/mansona/create-release-plan-setup/pull/82) run npm init release-plan-setup on this repo ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
 }
