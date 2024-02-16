@@ -1,5 +1,26 @@
 # Changelog
 
+## Release (2024-02-16)
+
+create-release-plan-setup 2.2.0 (minor)
+
+#### :rocket: Enhancement
+* `create-release-plan-setup`
+  * [#81](https://github.com/mansona/create-release-plan-setup/pull/81) update pnpm/action-setup in template ([@mansona](https://github.com/mansona))
+  * [#80](https://github.com/mansona/create-release-plan-setup/pull/80) update release-plan ([@mansona](https://github.com/mansona))
+  * [#78](https://github.com/mansona/create-release-plan-setup/pull/78) Show unlabelled ([@mansona](https://github.com/mansona))
+
+#### :bug: Bug Fix
+* `create-release-plan-setup`
+  * [#77](https://github.com/mansona/create-release-plan-setup/pull/77) fix the branch used when a PR is labelled ([@mansona](https://github.com/mansona))
+
+#### :house: Internal
+* `create-release-plan-setup`
+  * [#82](https://github.com/mansona/create-release-plan-setup/pull/82) run npm init release-plan-setup on this repo ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
 ## Release (2024-02-15)
 
 create-release-plan-setup 2.1.1 (patch)
