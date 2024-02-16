@@ -46,9 +46,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         # We need to download lots of history so that
-        # lerna-changelog can discover what's changed since the last release
+        # github-changelog can discover what's changed since the last release
         with:
           fetch-depth: 0
+          ref: 'main'
       - uses: actions/setup-node@v4
         with:
           node-version: 18
@@ -61,13 +62,20 @@ jobs:
       - name: "Generate Explanation and Prep Changelogs"
         id: explanation
         run: |
-          set -x
+          set +e
           
-          pnpm release-plan prepare
+          pnpm release-plan prepare 2> >(tee -a stderr.log >&2)
           
-          echo 'text<<EOF' >> $GITHUB_OUTPUT
-          jq .description .release-plan.json -r >> $GITHUB_OUTPUT
-          echo 'EOF' >> $GITHUB_OUTPUT
+
+          if [ $? -ne 0 ]; then
+            echo 'text<<EOF' >> $GITHUB_OUTPUT
+            cat stderr.log >> $GITHUB_OUTPUT
+            echo 'EOF' >> $GITHUB_OUTPUT
+          else
+            echo 'text<<EOF' >> $GITHUB_OUTPUT
+            jq .description .release-plan.json -r >> $GITHUB_OUTPUT
+            echo 'EOF' >> $GITHUB_OUTPUT
+          fi
         env:
           GITHUB_AUTH: ${{ secrets.GITHUB_TOKEN }}
 
