@@ -1,5 +1,17 @@
 # Changelog
 
+## Release (2024-04-03)
+
+create-release-plan-setup 2.3.0 (minor)
+
+#### :rocket: Enhancement
+* `create-release-plan-setup`
+  * [#94](https://github.com/embroider-build/create-release-plan-setup/pull/94) Bump sort-package-json from 2.7.0 to 2.10.0 ([@dependabot[bot]](https://github.com/apps/dependabot))
+  * [#95](https://github.com/embroider-build/create-release-plan-setup/pull/95) update to release-plan 0.9.0 ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
 ## Release (2024-02-16)
 
 create-release-plan-setup 2.2.0 (minor)

@@ -2,24 +2,16 @@
   "solution": {
     "create-release-plan-setup": {
       "impact": "minor",
-      "oldVersion": "2.1.1",
-      "newVersion": "2.2.0",
+      "oldVersion": "2.2.0",
+      "newVersion": "2.3.0",
       "constraints": [
         {
           "impact": "minor",
           "reason": "Appears in changelog section :rocket: Enhancement"
-        },
-        {
-          "impact": "patch",
-          "reason": "Appears in changelog section :bug: Bug Fix"
-        },
-        {
-          "impact": "patch",
-          "reason": "Appears in changelog section :house: Internal"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2024-02-16)\n\ncreate-release-plan-setup 2.2.0 (minor)\n\n#### :rocket: Enhancement\n* `create-release-plan-setup`\n  * [#81](https://github.com/mansona/create-release-plan-setup/pull/81) update pnpm/action-setup in template ([@mansona](https://github.com/mansona))\n  * [#80](https://github.com/mansona/create-release-plan-setup/pull/80) update release-plan ([@mansona](https://github.com/mansona))\n  * [#78](https://github.com/mansona/create-release-plan-setup/pull/78) Show unlabelled ([@mansona](https://github.com/mansona))\n\n#### :bug: Bug Fix\n* `create-release-plan-setup`\n  * [#77](https://github.com/mansona/create-release-plan-setup/pull/77) fix the branch used when a PR is labelled ([@mansona](https://github.com/mansona))\n\n#### :house: Internal\n* `create-release-plan-setup`\n  * [#82](https://github.com/mansona/create-release-plan-setup/pull/82) run npm init release-plan-setup on this repo ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+  "description": "## Release (2024-04-03)\n\ncreate-release-plan-setup 2.3.0 (minor)\n\n#### :rocket: Enhancement\n* `create-release-plan-setup`\n  * [#94](https://github.com/embroider-build/create-release-plan-setup/pull/94) Bump sort-package-json from 2.7.0 to 2.10.0 ([@dependabot[bot]](https://github.com/apps/dependabot))\n  * [#95](https://github.com/embroider-build/create-release-plan-setup/pull/95) update to release-plan 0.9.0 ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
 }
