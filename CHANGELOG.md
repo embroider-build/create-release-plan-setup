@@ -2,6 +2,17 @@
 
 ## Release (2024-04-03)
 
+create-release-plan-setup 2.3.1 (patch)
+
+#### :house: Internal
+* `create-release-plan-setup`
+  * [#97](https://github.com/embroider-build/create-release-plan-setup/pull/97) Fix repo url ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
+## Release (2024-04-03)
+
 create-release-plan-setup 2.3.0 (minor)
 
 #### :rocket: Enhancement
