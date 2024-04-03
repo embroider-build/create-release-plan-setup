@@ -3,7 +3,7 @@
   "version": "2.3.0",
   "description": "Simple npm init bin package to add the perfect release-plan setup",
   "keywords": [],
-  "repository": "https://github.com/mansona/create-release-plan-setup",
+  "repository": "https://github.com/embroider-build/create-release-plan-setup",
   "license": "MIT",
   "author": "Chris Manson <chris@manson.ie>",
   "type": "module",
