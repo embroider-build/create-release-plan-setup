@@ -22,7 +22,7 @@
     "test": "vitest --pool=forks"
   },
   "dependencies": {
-    "ejs": "^3.1.9",
+    "ejs": "^3.1.10",
     "execa": "^8.0.1",
     "gitconfiglocal": "^2.1.0",
     "github-label-sync": "^2.3.1",
