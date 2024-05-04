@@ -1,4 +1,3 @@
-/* global require, __dirname */
 import fs from 'fs';
 import path, { resolve } from 'path';
 import Project from 'fixturify-project';

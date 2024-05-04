@@ -142,11 +142,10 @@ async function installDependencies() {
 
 try {
   if (!fs.existsSync('package.json')) {
-    /* eslint-disable-next-line no-console */
     console.error(
       "create-release-plan-setup should be run from within an existing npm package's root directory"
     );
-    // eslint-disable-next-line no-process-exit
+    // eslint-disable-next-line n/no-process-exit
     process.exit(1);
   }
 
@@ -215,7 +214,6 @@ try {
   // TODO: figure out a decent way to test this part
   await updateLabels(pkg);
 } catch (e) {
-  /* eslint-disable-next-line no-console */
   console.error(e);
 
   throw e;
