@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2024-07-01)
+
+create-release-plan-setup 3.0.0 (major)
+
+#### :boom: Breaking Change
+* `create-release-plan-setup`
+  * [#123](https://github.com/embroider-build/create-release-plan-setup/pull/123) Support updating release plan when labels are changed on previously-merged PRs ([@kategengler](https://github.com/kategengler))
+
+#### Committers: 1
+- Katie Gengler ([@kategengler](https://github.com/kategengler))
+
 ## Release (2024-05-04)
 
 create-release-plan-setup 2.4.0 (minor)
