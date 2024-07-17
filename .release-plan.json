@@ -1,17 +1,17 @@
 {
   "solution": {
     "create-release-plan-setup": {
-      "impact": "major",
-      "oldVersion": "2.4.0",
-      "newVersion": "3.0.0",
+      "impact": "minor",
+      "oldVersion": "3.0.0",
+      "newVersion": "3.1.0",
       "constraints": [
         {
-          "impact": "major",
-          "reason": "Appears in changelog section :boom: Breaking Change"
+          "impact": "minor",
+          "reason": "Appears in changelog section :rocket: Enhancement"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2024-07-01)\n\ncreate-release-plan-setup 3.0.0 (major)\n\n#### :boom: Breaking Change\n* `create-release-plan-setup`\n  * [#123](https://github.com/embroider-build/create-release-plan-setup/pull/123) Support updating release plan when labels are changed on previously-merged PRs ([@kategengler](https://github.com/kategengler))\n\n#### Committers: 1\n- Katie Gengler ([@kategengler](https://github.com/kategengler))\n"
+  "description": "## Release (2024-07-17)\n\ncreate-release-plan-setup 3.1.0 (minor)\n\n#### :rocket: Enhancement\n* `create-release-plan-setup`\n  * [#127](https://github.com/embroider-build/create-release-plan-setup/pull/127) use the latest pnpm/action-setup and don't define pnpm version if packageManager is defined ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
 }
