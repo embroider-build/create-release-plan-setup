@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2024-07-17)
+
+create-release-plan-setup 3.1.0 (minor)
+
+#### :rocket: Enhancement
+* `create-release-plan-setup`
+  * [#127](https://github.com/embroider-build/create-release-plan-setup/pull/127) use the latest pnpm/action-setup and don't define pnpm version if packageManager is defined ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
 ## Release (2024-07-01)
 
 create-release-plan-setup 3.0.0 (major)
