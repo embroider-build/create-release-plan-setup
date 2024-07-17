@@ -177,7 +177,11 @@ describe('main binary', function () {
   });
 
   describe('workflow files', function () {
-    function expectedPublishWorkflowContents(kind = 'npm', defaultBranch = 'main') {
+    function expectedPublishWorkflowContents({
+      kind = 'npm',
+      defaultBranch = 'main',
+      hasPackageManager = false,
+    } = {}) {
       let publishTemplate = fs.readFileSync(
         path.join(__dirname, '..', 'publish-template.yml.ejs'),
         {
@@ -185,10 +189,18 @@ describe('main binary', function () {
         }
       );
 
-      return ejs.render(publishTemplate, { pnpm: kind === 'pnpm', defaultBranch });
+      return ejs.render(publishTemplate, {
+        pnpm: kind === 'pnpm',
+        defaultBranch,
+        hasPackageManager,
+      });
     }
 
-    function expectedPlanReleaseWorkflowContents(kind = 'npm', defaultBranch = 'main') {
+    function expectedPlanReleaseWorkflowContents({
+      kind = 'npm',
+      defaultBranch = 'main',
+      hasPackageManager = false,
+    } = {}) {
       let publishTemplate = fs.readFileSync(
         path.join(__dirname, '..', 'plan-release-template.yml.ejs'),
         {
@@ -196,7 +208,11 @@ describe('main binary', function () {
         }
       );
 
-      return ejs.render(publishTemplate, { pnpm: kind === 'pnpm', defaultBranch });
+      return ejs.render(publishTemplate, {
+        pnpm: kind === 'pnpm',
+        defaultBranch,
+        hasPackageManager,
+      });
     }
 
     it('adds both the workflow files for Release Plan PR and the actual release when no pnpm-lock.yaml exists', async function () {
@@ -221,10 +237,29 @@ describe('main binary', function () {
       await exec(['--no-install', '--no-label-updates']);
 
       expect(fs.readFileSync('.github/workflows/publish.yml', { encoding: 'utf8' })).toBe(
-        expectedPublishWorkflowContents('pnpm')
+        expectedPublishWorkflowContents({ kind: 'pnpm' })
       );
       expect(fs.readFileSync('.github/workflows/plan-release.yml', { encoding: 'utf8' })).toBe(
-        expectedPlanReleaseWorkflowContents('pnpm')
+        expectedPlanReleaseWorkflowContents({ kind: 'pnpm' })
+      );
+    });
+
+    it('doesn`t apply pnpm version when packageManager is defined', async function () {
+      fs.writeFileSync('pnpm-lock.yaml', '', { encoding: 'utf-8' });
+      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf-8'));
+      packageJson.packageManager = 'pnpm@9.5.0';
+      fs.writeFileSync('package.json', JSON.stringify(packageJson, null, 2));
+
+      expect(fs.existsSync('.github/workflows/publish.yml')).toBeFalsy();
+      expect(fs.existsSync('.github/workflows/plan-release.yml')).toBeFalsy();
+
+      await exec(['--no-install', '--no-label-updates']);
+
+      expect(fs.readFileSync('.github/workflows/publish.yml', { encoding: 'utf8' })).toBe(
+        expectedPublishWorkflowContents({ kind: 'pnpm', hasPackageManager: true })
+      );
+      expect(fs.readFileSync('.github/workflows/plan-release.yml', { encoding: 'utf8' })).toBe(
+        expectedPlanReleaseWorkflowContents({ kind: 'pnpm', hasPackageManager: true })
       );
     });
   });

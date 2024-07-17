@@ -109,6 +109,13 @@ function isPnpm() {
   return fs.existsSync('pnpm-lock.yaml');
 }
 
+function hasPackageManager() {
+  const data = fs.readFileSync('./package.json', 'utf-8');
+  const pkg = JSON.parse(data);
+
+  return pkg.packageManager;
+}
+
 async function getDefaultBranch() {
   const originRemoteUrl = await getOriginRemoteUrl();
 
@@ -182,14 +189,14 @@ try {
 
     const defaultBranch = await getDefaultBranch();
 
-    fs.writeFileSync(
-      '.github/workflows/publish.yml',
-      ejs.render(publishContents, { pnpm: isPnpm(), defaultBranch }),
-      { encoding: 'utf8' }
-    );
+    const renderOptions = { pnpm: isPnpm(), defaultBranch, hasPackageManager: hasPackageManager() };
+
+    fs.writeFileSync('.github/workflows/publish.yml', ejs.render(publishContents, renderOptions), {
+      encoding: 'utf8',
+    });
     fs.writeFileSync(
       '.github/workflows/plan-release.yml',
-      ejs.render(planReleaseContents, { pnpm: isPnpm(), defaultBranch }),
+      ejs.render(planReleaseContents, renderOptions),
       { encoding: 'utf8' }
     );
   }
