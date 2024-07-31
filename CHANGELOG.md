@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2024-07-31)
+
+create-release-plan-setup 3.2.0 (minor)
+
+#### :rocket: Enhancement
+* `create-release-plan-setup`
+  * [#133](https://github.com/embroider-build/create-release-plan-setup/pull/133) Add issue read permission to action ([@wagenet](https://github.com/wagenet))
+
+#### Committers: 1
+- Peter Wagenet ([@wagenet](https://github.com/wagenet))
+
 ## Release (2024-07-17)
 
 create-release-plan-setup 3.1.0 (minor)
