@@ -2,8 +2,8 @@
   "solution": {
     "create-release-plan-setup": {
       "impact": "minor",
-      "oldVersion": "3.0.0",
-      "newVersion": "3.1.0",
+      "oldVersion": "3.1.0",
+      "newVersion": "3.2.0",
       "constraints": [
         {
           "impact": "minor",
@@ -13,5 +13,5 @@
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2024-07-17)\n\ncreate-release-plan-setup 3.1.0 (minor)\n\n#### :rocket: Enhancement\n* `create-release-plan-setup`\n  * [#127](https://github.com/embroider-build/create-release-plan-setup/pull/127) use the latest pnpm/action-setup and don't define pnpm version if packageManager is defined ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+  "description": "## Release (2024-07-31)\n\ncreate-release-plan-setup 3.2.0 (minor)\n\n#### :rocket: Enhancement\n* `create-release-plan-setup`\n  * [#133](https://github.com/embroider-build/create-release-plan-setup/pull/133) Add issue read permission to action ([@wagenet](https://github.com/wagenet))\n\n#### Committers: 1\n- Peter Wagenet ([@wagenet](https://github.com/wagenet))\n"
 }

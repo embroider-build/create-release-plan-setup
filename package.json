@@ -1,6 +1,6 @@
 {
   "name": "create-release-plan-setup",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "description": "Simple npm init bin package to add the perfect release-plan setup",
   "keywords": [],
   "repository": "https://github.com/embroider-build/create-release-plan-setup",
