@@ -29,7 +29,7 @@
     "hosted-git-info": "^7.0.1",
     "lodash.template": "^4.5.0",
     "semver": "^7.6.0",
-    "sort-package-json": "^2.10.0",
+    "sort-package-json": "^2.10.1",
     "which": "^4.0.0"
   },
   "devDependencies": {
