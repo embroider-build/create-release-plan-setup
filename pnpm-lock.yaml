@@ -18,8 +18,8 @@ dependencies:
     specifier: ^2.3.1
     version: 2.3.1
   hosted-git-info:
-    specifier: ^7.0.1
-    version: 7.0.2
+    specifier: ^8.0.0
+    version: 8.0.0
   lodash.template:
     specifier: ^4.5.0
     version: 4.5.0
@@ -2004,6 +2004,14 @@ packages:
     engines: {node: ^16.14.0 || >=18.0.0}
     dependencies:
       lru-cache: 10.4.3
+    dev: true
+
+  /hosted-git-info@8.0.0:
+    resolution: {integrity: sha512-4nw3vOVR+vHUOT8+U4giwe2tcGv+R3pwwRidUe67DoMBTjhrfr6rZYJVVwdkBE+Um050SG+X9tf0Jo4fOpn01w==}
+    engines: {node: ^18.17.0 || >=20.5.0}
+    dependencies:
+      lru-cache: 10.4.3
+    dev: false
 
   /http-cache-semantics@4.1.1:
     resolution: {integrity: sha512-er295DKPVsV82j5kw1Gjt+ADA/XYHsajl82cGNQG2eyoPkvgUhX+nDIyelzhIWbbsXP39EHcI6l5tYs2FYqYXQ==}
