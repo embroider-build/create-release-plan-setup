@@ -1,17 +1,8 @@
 {
   "solution": {
     "create-release-plan-setup": {
-      "impact": "minor",
-      "oldVersion": "3.1.0",
-      "newVersion": "3.2.0",
-      "constraints": [
-        {
-          "impact": "minor",
-          "reason": "Appears in changelog section :rocket: Enhancement"
-        }
-      ],
-      "pkgJSONPath": "./package.json"
+      "oldVersion": "3.2.0"
     }
   },
-  "description": "## Release (2024-07-31)\n\ncreate-release-plan-setup 3.2.0 (minor)\n\n#### :rocket: Enhancement\n* `create-release-plan-setup`\n  * [#133](https://github.com/embroider-build/create-release-plan-setup/pull/133) Add issue read permission to action ([@wagenet](https://github.com/wagenet))\n\n#### Committers: 1\n- Peter Wagenet ([@wagenet](https://github.com/wagenet))\n"
+  "description": "\n\n\n\n"
 }
