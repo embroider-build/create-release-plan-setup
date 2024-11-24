@@ -2,8 +2,8 @@
   "solution": {
     "create-release-plan-setup": {
       "impact": "minor",
-      "oldVersion": "3.1.0",
-      "newVersion": "3.2.0",
+      "oldVersion": "3.2.0",
+      "newVersion": "3.3.0",
       "constraints": [
         {
           "impact": "minor",
@@ -13,5 +13,5 @@
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2024-07-31)\n\ncreate-release-plan-setup 3.2.0 (minor)\n\n#### :rocket: Enhancement\n* `create-release-plan-setup`\n  * [#133](https://github.com/embroider-build/create-release-plan-setup/pull/133) Add issue read permission to action ([@wagenet](https://github.com/wagenet))\n\n#### Committers: 1\n- Peter Wagenet ([@wagenet](https://github.com/wagenet))\n"
+  "description": "## Release (2024-11-24)\n\ncreate-release-plan-setup 3.3.0 (minor)\n\n#### :rocket: Enhancement\n* `create-release-plan-setup`\n  * [#157](https://github.com/embroider-build/create-release-plan-setup/pull/157) add --provenance to publish by default ([@mansona](https://github.com/mansona))\n  * [#156](https://github.com/embroider-build/create-release-plan-setup/pull/156) if you're using pnpm make sure to set cache ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
 }
