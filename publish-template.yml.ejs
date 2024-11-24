@@ -43,15 +43,16 @@ jobs:
       pull-requests: write
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4<% if (pnpm) { %>
+      - uses: pnpm/action-setup@v4<% if (!hasPackageManager) { %>
+        with:
+          version: 9<% } %><% } %>
       - uses: actions/setup-node@v4
         with:
           node-version: 18
           # This creates an .npmrc that reads the NODE_AUTH_TOKEN environment variable
           registry-url: 'https://registry.npmjs.org'<% if (pnpm) { %>
-      - uses: pnpm/action-setup@v4<% if (!hasPackageManager) { %>
-        with:
-          version: 9<% } %>
+          cache: pnpm
       - run: pnpm install --frozen-lockfile
       - name: npm publish
         run: pnpm release-plan publish<% } else { %>
