@@ -1,5 +1,17 @@
 # Changelog
 
+## Release (2024-11-24)
+
+create-release-plan-setup 3.3.0 (minor)
+
+#### :rocket: Enhancement
+* `create-release-plan-setup`
+  * [#157](https://github.com/embroider-build/create-release-plan-setup/pull/157) add --provenance to publish by default ([@mansona](https://github.com/mansona))
+  * [#156](https://github.com/embroider-build/create-release-plan-setup/pull/156) if you're using pnpm make sure to set cache ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
 ## Release (2024-07-31)
 
 create-release-plan-setup 3.2.0 (minor)
