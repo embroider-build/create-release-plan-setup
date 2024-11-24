@@ -2,8 +2,8 @@
   "solution": {
     "create-release-plan-setup": {
       "impact": "patch",
-      "oldVersion": "3.3.0",
-      "newVersion": "3.3.1",
+      "oldVersion": "3.3.1",
+      "newVersion": "3.3.2",
       "constraints": [
         {
           "impact": "patch",
@@ -13,5 +13,5 @@
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2024-11-24)\n\ncreate-release-plan-setup 3.3.1 (patch)\n\n#### :bug: Bug Fix\n* `create-release-plan-setup`\n  * [#159](https://github.com/embroider-build/create-release-plan-setup/pull/159) fix provenance for pnpm ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+  "description": "## Release (2024-11-24)\n\ncreate-release-plan-setup 3.3.2 (patch)\n\n#### :bug: Bug Fix\n* `create-release-plan-setup`\n  * [#161](https://github.com/embroider-build/create-release-plan-setup/pull/161) add required permissions for provenance ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
 }
