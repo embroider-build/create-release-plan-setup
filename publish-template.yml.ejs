@@ -55,7 +55,7 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - name: npm publish
-        run: pnpm release-plan publish --provenance<% } else { %>
+        run: NPM_CONFIG_PROVENANCE=true pnpm release-plan publish<% } else { %>
       - run: npm ci
       - name: npm publish
         run: npx release-plan publish --provenance<% } %>
