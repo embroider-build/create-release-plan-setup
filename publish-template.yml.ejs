@@ -55,10 +55,10 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - name: npm publish
-        run: pnpm release-plan publish<% } else { %>
+        run: pnpm release-plan publish --provenance<% } else { %>
       - run: npm ci
       - name: npm publish
-        run: npx release-plan publish<% } %>
+        run: npx release-plan publish --provenance<% } %>
         env:
           GITHUB_AUTH: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
