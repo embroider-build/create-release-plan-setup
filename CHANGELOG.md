@@ -2,6 +2,17 @@
 
 ## Release (2024-11-24)
 
+create-release-plan-setup 3.3.1 (patch)
+
+#### :bug: Bug Fix
+* `create-release-plan-setup`
+  * [#159](https://github.com/embroider-build/create-release-plan-setup/pull/159) fix provenance for pnpm ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
+## Release (2024-11-24)
+
 create-release-plan-setup 3.3.0 (minor)
 
 #### :rocket: Enhancement
