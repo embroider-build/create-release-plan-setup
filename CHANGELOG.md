@@ -2,6 +2,17 @@
 
 ## Release (2024-11-24)
 
+create-release-plan-setup 3.3.2 (patch)
+
+#### :bug: Bug Fix
+* `create-release-plan-setup`
+  * [#161](https://github.com/embroider-build/create-release-plan-setup/pull/161) add required permissions for provenance ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
+## Release (2024-11-24)
+
 create-release-plan-setup 3.3.1 (patch)
 
 #### :bug: Bug Fix
