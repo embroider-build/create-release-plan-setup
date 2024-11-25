@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path, { resolve } from 'path';
-import Project from 'fixturify-project';
+import { Project } from 'fixturify-project';
 import { execa } from 'execa';
 import ejs from 'ejs';
 
@@ -30,10 +30,10 @@ expect.extend({
 describe('main binary', function () {
   let project;
 
-  beforeEach(function () {
+  beforeEach(async function () {
     project = new Project('some-thing-cool', '0.1.0');
-    project.writeSync();
-    process.chdir(path.join(project.root, project.name));
+    await project.write();
+    process.chdir(project.baseDir);
 
     // ensure an EDITOR is present
     process.env.EDITOR = '/bin/whatever';
@@ -62,7 +62,7 @@ describe('main binary', function () {
 
   it('does not modify if an existing prefix exists in CHANGELOG.md', async function () {
     project.files['CHANGELOG.md'] = `# ChangeLog\n\n## v1.2.0\n* Foo bar`;
-    project.writeSync();
+    await project.write();
 
     await exec(['--no-install', '--no-label-updates']);
 
@@ -74,7 +74,7 @@ describe('main binary', function () {
   it('does not modify if an existing prefix exists anywhere on the line and has different casing in CHANGELOG.md', async function () {
     project.files['CHANGELOG.md'] =
       `# the most mighty CHANgELOG you have ever seen\n\n## v1.2.0\n* Foo bar`;
-    project.writeSync();
+    await project.write();
 
     await exec(['--no-install', '--no-label-updates']);
 
@@ -100,7 +100,7 @@ describe('main binary', function () {
   fetch = +refs/heads/*:refs/remotes/origin/*`,
       };
 
-      project.writeSync();
+      await project.write();
 
       await exec(['--no-install', '--no-label-updates']);
 
@@ -140,7 +140,7 @@ describe('main binary', function () {
 
     it('does not update devDependencies if release-plan range is greater', async function () {
       project.addDevDependency('release-plan', '^999.999.999');
-      project.writeSync();
+      await project.write();
 
       await exec(['--no-install', '--no-label-updates']);
 
@@ -265,7 +265,7 @@ describe('main binary', function () {
   });
 
   describe('RELEASE.md', function () {
-    beforeEach(() => {
+    beforeEach(async () => {
       project.files['.git'] = {
         config: `
 [remote "origin"]
@@ -273,7 +273,7 @@ describe('main binary', function () {
   fetch = +refs/heads/*:refs/remotes/origin/*`,
       };
 
-      project.writeSync();
+      await project.write();
     });
 
     function expectedReleaseContents() {
@@ -309,7 +309,7 @@ describe('main binary', function () {
 
       it('adds a basic header in changelog if prefix does not exist in CHANGELOG.md', async function () {
         project.files['CHANGELOG.md'] = `## v1.2.0\n* Foo bar`;
-        project.writeSync();
+        await project.write();
 
         await exec(['--no-install', '--no-label-updates']);
 
