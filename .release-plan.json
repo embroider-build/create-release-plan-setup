@@ -1,17 +1,25 @@
 {
   "solution": {
     "create-release-plan-setup": {
-      "impact": "patch",
-      "oldVersion": "3.3.1",
-      "newVersion": "3.3.2",
+      "impact": "major",
+      "oldVersion": "3.3.2",
+      "newVersion": "4.0.0",
       "constraints": [
         {
+          "impact": "major",
+          "reason": "Appears in changelog section :boom: Breaking Change"
+        },
+        {
+          "impact": "minor",
+          "reason": "Appears in changelog section :rocket: Enhancement"
+        },
+        {
           "impact": "patch",
-          "reason": "Appears in changelog section :bug: Bug Fix"
+          "reason": "Appears in changelog section :house: Internal"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2024-11-24)\n\ncreate-release-plan-setup 3.3.2 (patch)\n\n#### :bug: Bug Fix\n* `create-release-plan-setup`\n  * [#161](https://github.com/embroider-build/create-release-plan-setup/pull/161) add required permissions for provenance ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+  "description": "## Release (2024-11-25)\n\ncreate-release-plan-setup 4.0.0 (major)\n\n#### :boom: Breaking Change\n* `create-release-plan-setup`\n  * [#166](https://github.com/embroider-build/create-release-plan-setup/pull/166) drop support for Node 16 ([@mansona](https://github.com/mansona))\n\n#### :rocket: Enhancement\n* `create-release-plan-setup`\n  * [#167](https://github.com/embroider-build/create-release-plan-setup/pull/167) update peter-evans/create-pull-request action ([@mansona](https://github.com/mansona))\n\n#### :house: Internal\n* `create-release-plan-setup`\n  * [#169](https://github.com/embroider-build/create-release-plan-setup/pull/169) update fixturify project ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
 }
