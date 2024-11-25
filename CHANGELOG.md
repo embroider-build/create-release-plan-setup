@@ -1,5 +1,24 @@
 # Changelog
 
+## Release (2024-11-25)
+
+create-release-plan-setup 4.0.0 (major)
+
+#### :boom: Breaking Change
+* `create-release-plan-setup`
+  * [#166](https://github.com/embroider-build/create-release-plan-setup/pull/166) drop support for Node 16 ([@mansona](https://github.com/mansona))
+
+#### :rocket: Enhancement
+* `create-release-plan-setup`
+  * [#167](https://github.com/embroider-build/create-release-plan-setup/pull/167) update peter-evans/create-pull-request action ([@mansona](https://github.com/mansona))
+
+#### :house: Internal
+* `create-release-plan-setup`
+  * [#169](https://github.com/embroider-build/create-release-plan-setup/pull/169) update fixturify project ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
 ## Release (2024-11-24)
 
 create-release-plan-setup 3.3.2 (patch)
