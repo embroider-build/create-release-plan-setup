@@ -15,7 +15,8 @@ This is a simple npm init package to add the perfect release-plan setup. Running
 ### Generate a GitHub personal access token
 
 1. Obtain a [GitHub personal access token](https://github.com/settings/tokens/new?scopes=repo&description=GITHUB_AUTH+env+variable).
-2. Make sure the token is available as the `GITHUB_AUTH` environment variable.
+2. Make sure the token is available locally as the `GITHUB_AUTH` environment variable. (you can also prepend it to the init script)
+  
   For instance:
   ```bash
   export GITHUB_AUTH=abc123def456
@@ -29,6 +30,11 @@ This is used to add the required Labels to your repo, if you don't want to autom
 npm init release-plan-setup@latest
 ```
 
+Or prepended with your `GITHUB_AUTH` token:
+
+```
+GITHUB_AUTH=abc123def456 npm init release-plan-setup@latest
+```
 This can be run again later to make sure your setup is on the latest and greatest setup.
 
 ### Ensure your GitHub Actions token can create PRs
