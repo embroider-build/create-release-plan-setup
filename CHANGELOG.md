@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2024-11-27)
+
+create-release-plan-setup 4.1.0 (minor)
+
+#### :rocket: Enhancement
+* `create-release-plan-setup`
+  * [#170](https://github.com/embroider-build/create-release-plan-setup/pull/170) Minor formatting improvements ([@bertdeblock](https://github.com/bertdeblock))
+
+#### Committers: 1
+- Bert De Block ([@bertdeblock](https://github.com/bertdeblock))
+
 ## Release (2024-11-25)
 
 create-release-plan-setup 4.0.0 (major)
