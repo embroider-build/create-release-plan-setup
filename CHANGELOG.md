@@ -1,5 +1,17 @@
 # Changelog
 
+## Release (2025-02-17)
+
+create-release-plan-setup 4.1.1 (patch)
+
+#### :house: Internal
+* `create-release-plan-setup`
+  * [#189](https://github.com/embroider-build/create-release-plan-setup/pull/189) update vitest ([@mansona](https://github.com/mansona))
+  * [#188](https://github.com/embroider-build/create-release-plan-setup/pull/188) update release-plan ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
 ## Release (2024-11-27)
 
 create-release-plan-setup 4.1.0 (minor)
