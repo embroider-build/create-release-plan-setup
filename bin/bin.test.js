@@ -124,7 +124,7 @@ describe('main binary', function () {
         {
           "dependencies": {},
           "devDependencies": {
-            "release-plan": toMatchDevDependency<release-plan>,
+            "release-plan": toMatchDevDependency<"release-plan">,
           },
           "keywords": [],
           "name": "some-thing-cool",
