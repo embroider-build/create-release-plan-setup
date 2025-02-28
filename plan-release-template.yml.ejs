@@ -55,7 +55,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 18
-      - run: npm install -g release-plan
+      - name: "Find Release Plan Version"
+        id: find-release-plan-version
+        run: |
+          release_plan_version=$(jq -r '.devDependencies["release-plan"]' package.json)
+          echo "release_plan_version=$release_plan_version" >> $GITHUB_OUTPUT
+      - run: npm install -g release-plan@"${{steps.find-release-plan-version.outputs.release_plan_version}}"
       - name: "Generate Explanation and Prep Changelogs"
         id: explanation
         run: |
