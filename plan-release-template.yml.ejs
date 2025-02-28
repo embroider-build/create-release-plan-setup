@@ -50,22 +50,21 @@ jobs:
         # github-changelog can discover what's changed since the last release
         with:
           fetch-depth: 0
-          ref: '<%= defaultBranch %>'<% if (pnpm) { %>
-      - uses: pnpm/action-setup@v4<% if (!hasPackageManager) { %>
-        with:
-          version: 9<% } %><% } %>
+          ref: '<%= defaultBranch %>'
       - uses: actions/setup-node@v4
         with:
-          node-version: 18<% if (pnpm) { %>
-          cache: pnpm
-      - run: pnpm install --frozen-lockfile<% } else { %>
-      - run: npm ci<% } %>
+          node-version: 18
+      - name: "Find Release Plan Version"
+        id: find-release-plan-version
+        run: |
+          release_plan_version=$(jq -r '.devDependencies["release-plan"]' package.json)
+          echo "release_plan_version=$release_plan_version" >> $GITHUB_OUTPUT
+      - run: npm install -g release-plan@"${{steps.find-release-plan-version.outputs.release_plan_version}}"
       - name: "Generate Explanation and Prep Changelogs"
         id: explanation
         run: |
-          set +e<% if (pnpm) { %>
-          pnpm release-plan prepare 2> >(tee -a release-plan-stderr.txt >&2)<% } else { %>
-          npx release-plan prepare 2> >(tee -a release-plan-stderr.txt >&2)<% } %>
+          set +e
+          release-plan prepare 2> >(tee -a release-plan-stderr.txt >&2)
 
           if [ $? -ne 0 ]; then
             release_plan_output=$(cat release-plan-stderr.txt)
