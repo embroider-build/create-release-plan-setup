@@ -1,5 +1,27 @@
 # Changelog
 
+## Release (2025-02-28)
+
+create-release-plan-setup 4.2.0 (minor)
+
+#### :rocket: Enhancement
+* `create-release-plan-setup`
+  * [#194](https://github.com/embroider-build/create-release-plan-setup/pull/194) Update the Plan Release template to include the version for single packages in the PR title and in the commit message. ([@kategengler](https://github.com/kategengler))
+  * [#193](https://github.com/embroider-build/create-release-plan-setup/pull/193) Update the publish template to make use of `paths` filtering in github workflows ([@kategengler](https://github.com/kategengler))
+
+#### :memo: Documentation
+* `create-release-plan-setup`
+  * [#90](https://github.com/embroider-build/create-release-plan-setup/pull/90) Update readme ([@beerinho](https://github.com/beerinho))
+
+#### :house: Internal
+* `create-release-plan-setup`
+  * [#197](https://github.com/embroider-build/create-release-plan-setup/pull/197) update the release-plan setup ([@mansona](https://github.com/mansona))
+
+#### Committers: 3
+- Chris Manson ([@mansona](https://github.com/mansona))
+- Daniel Beer ([@beerinho](https://github.com/beerinho))
+- Katie Gengler ([@kategengler](https://github.com/kategengler))
+
 ## Release (2025-02-17)
 
 create-release-plan-setup 4.1.1 (patch)
