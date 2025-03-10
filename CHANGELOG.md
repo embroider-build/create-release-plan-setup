@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2025-03-10)
+
+* create-release-plan-setup 4.3.0 (minor)
+
+#### :rocket: Enhancement
+* `create-release-plan-setup`
+  * [#204](https://github.com/embroider-build/create-release-plan-setup/pull/204) chore: Bump release-plan ([@TSenter](https://github.com/TSenter))
+
+#### Committers: 1
+- Tyler Senter ([@TSenter](https://github.com/TSenter))
+
 ## Release (2025-02-28)
 
 create-release-plan-setup 4.2.0 (minor)
