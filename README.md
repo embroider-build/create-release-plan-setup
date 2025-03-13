@@ -24,6 +24,15 @@ This is a simple npm init package to add the perfect release-plan setup. Running
 
 This is used to add the required Labels to your repo, if you don't want to automatically generate them you can run the next command with `--no-label-updates`
 
+### (Only for new repositories) Create the first tag
+
+`release-plan` requires an initial tag. We suggest:
+
+```bash
+git tag v0.0.0
+git push origin v0.0.0
+```
+
 ### Run the init script
 
 ```
