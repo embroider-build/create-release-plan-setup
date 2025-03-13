@@ -60,6 +60,8 @@ As this workflow automatically creates a PR for you during the release process y
 
 Once you're ready to do your first release with this release-plan setup your GitHub Actions will need to have a npm token to actually do the release. We recommend that you generate a single Granular Access Token that is able to release your package (or all the packages in a your monorepo).
 
+If you are creating a new package, you will need to manually publish once first in order to generate a Granular Access Token. Be sure you are okay with the version in `package.json` as the first version then run `npm publish`. 
+
 To create an access token you can follow [this guide on the npm docs](https://docs.npmjs.com/creating-and-viewing-access-tokens#creating-granular-access-tokens-on-the-website). Once you have your access token you can add it to your repo following these steps:
 
 - open the settings for your repo
