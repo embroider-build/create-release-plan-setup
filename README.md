@@ -24,6 +24,15 @@ This is a simple npm init package to add the perfect release-plan setup. Running
 
 This is used to add the required Labels to your repo, if you don't want to automatically generate them you can run the next command with `--no-label-updates`
 
+### (Only for new repositories) Create the first tag
+
+`release-plan` requires an initial tag. We suggest:
+
+```bash
+git tag v0.0.0
+git push origin v0.0.0
+```
+
 ### Run the init script
 
 ```
@@ -50,6 +59,8 @@ As this workflow automatically creates a PR for you during the release process y
 ### Create a NPM_TOKEN
 
 Once you're ready to do your first release with this release-plan setup your GitHub Actions will need to have a npm token to actually do the release. We recommend that you generate a single Granular Access Token that is able to release your package (or all the packages in a your monorepo).
+
+If you are creating a new package, you will need to manually publish once first in order to generate a Granular Access Token. Be sure you are okay with the version in `package.json` as the first version then run `npm publish`. 
 
 To create an access token you can follow [this guide on the npm docs](https://docs.npmjs.com/creating-and-viewing-access-tokens#creating-granular-access-tokens-on-the-website). Once you have your access token you can add it to your repo following these steps:
 

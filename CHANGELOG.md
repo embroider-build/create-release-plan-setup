@@ -1,5 +1,24 @@
 # Changelog
 
+## Release (2025-03-13)
+
+* create-release-plan-setup 4.3.0 (minor)
+
+#### :rocket: Enhancement
+* `create-release-plan-setup`
+  * [#209](https://github.com/embroider-build/create-release-plan-setup/pull/209) update release-plan ([@mansona](https://github.com/mansona))
+  * [#204](https://github.com/embroider-build/create-release-plan-setup/pull/204) chore: Bump release-plan ([@TSenter](https://github.com/TSenter))
+
+#### :memo: Documentation
+* `create-release-plan-setup`
+  * [#198](https://github.com/embroider-build/create-release-plan-setup/pull/198) Add directions for creating a new package with a Granular Access Token ([@kategengler](https://github.com/kategengler))
+  * [#199](https://github.com/embroider-build/create-release-plan-setup/pull/199) Add step for brand-new repos ([@kategengler](https://github.com/kategengler))
+
+#### Committers: 3
+- Chris Manson ([@mansona](https://github.com/mansona))
+- Katie Gengler ([@kategengler](https://github.com/kategengler))
+- Tyler Senter ([@TSenter](https://github.com/TSenter))
+
 ## Release (2025-02-28)
 
 create-release-plan-setup 4.2.0 (minor)

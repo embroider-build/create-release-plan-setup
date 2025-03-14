@@ -2,8 +2,9 @@
   "solution": {
     "create-release-plan-setup": {
       "impact": "minor",
-      "oldVersion": "4.1.1",
-      "newVersion": "4.2.0",
+      "oldVersion": "4.2.0",
+      "newVersion": "4.3.0",
+      "tagName": "latest",
       "constraints": [
         {
           "impact": "minor",
@@ -12,14 +13,10 @@
         {
           "impact": "patch",
           "reason": "Appears in changelog section :memo: Documentation"
-        },
-        {
-          "impact": "patch",
-          "reason": "Appears in changelog section :house: Internal"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2025-02-28)\n\ncreate-release-plan-setup 4.2.0 (minor)\n\n#### :rocket: Enhancement\n* `create-release-plan-setup`\n  * [#194](https://github.com/embroider-build/create-release-plan-setup/pull/194) Update the Plan Release template to include the version for single packages in the PR title and in the commit message. ([@kategengler](https://github.com/kategengler))\n  * [#193](https://github.com/embroider-build/create-release-plan-setup/pull/193) Update the publish template to make use of `paths` filtering in github workflows ([@kategengler](https://github.com/kategengler))\n\n#### :memo: Documentation\n* `create-release-plan-setup`\n  * [#90](https://github.com/embroider-build/create-release-plan-setup/pull/90) Update readme ([@beerinho](https://github.com/beerinho))\n\n#### :house: Internal\n* `create-release-plan-setup`\n  * [#197](https://github.com/embroider-build/create-release-plan-setup/pull/197) update the release-plan setup ([@mansona](https://github.com/mansona))\n\n#### Committers: 3\n- Chris Manson ([@mansona](https://github.com/mansona))\n- Daniel Beer ([@beerinho](https://github.com/beerinho))\n- Katie Gengler ([@kategengler](https://github.com/kategengler))\n"
+  "description": "## Release (2025-03-13)\n\n* create-release-plan-setup 4.3.0 (minor)\n\n#### :rocket: Enhancement\n* `create-release-plan-setup`\n  * [#209](https://github.com/embroider-build/create-release-plan-setup/pull/209) update release-plan ([@mansona](https://github.com/mansona))\n  * [#204](https://github.com/embroider-build/create-release-plan-setup/pull/204) chore: Bump release-plan ([@TSenter](https://github.com/TSenter))\n\n#### :memo: Documentation\n* `create-release-plan-setup`\n  * [#198](https://github.com/embroider-build/create-release-plan-setup/pull/198) Add directions for creating a new package with a Granular Access Token ([@kategengler](https://github.com/kategengler))\n  * [#199](https://github.com/embroider-build/create-release-plan-setup/pull/199) Add step for brand-new repos ([@kategengler](https://github.com/kategengler))\n\n#### Committers: 3\n- Chris Manson ([@mansona](https://github.com/mansona))\n- Katie Gengler ([@kategengler](https://github.com/kategengler))\n- Tyler Senter ([@TSenter](https://github.com/TSenter))\n"
 }
