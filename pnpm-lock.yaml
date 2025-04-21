@@ -21,8 +21,8 @@ importers:
         specifier: ^2.3.1
         version: 2.3.1
       hosted-git-info:
-        specifier: ^8.0.2
-        version: 8.0.2
+        specifier: ^8.1.0
+        version: 8.1.0
       lodash.template:
         specifier: ^4.5.0
         version: 4.5.0
@@ -1486,8 +1486,8 @@ packages:
     resolution: {integrity: sha512-kyCuEOWjJqZuDbRHzL8V93NzQhwIB71oFWSyzVo+KPZI+pnQPPxucdkrOZvkLRnrf5URsQM+IJ09Dw29cRALIA==}
     engines: {node: '>=10'}
 
-  hosted-git-info@8.0.2:
-    resolution: {integrity: sha512-sYKnA7eGln5ov8T8gnYlkSOxFJvywzEx9BueN6xo/GKO8PGiI6uK6xx+DIGe45T3bdVjLAQDQW1aicT8z8JwQg==}
+  hosted-git-info@8.1.0:
+    resolution: {integrity: sha512-Rw/B2DNQaPBICNXEm8balFz9a6WpZrkCGpcWFpy7nCj+NyhSdqXipmfvtmWt9xGfp0wZnBxB+iVpLmQMYt47Tw==}
     engines: {node: ^18.17.0 || >=20.5.0}
 
   http-cache-semantics@4.1.1:
@@ -2976,7 +2976,7 @@ snapshots:
     dependencies:
       '@npmcli/git': 6.0.1
       glob: 10.4.5
-      hosted-git-info: 8.0.2
+      hosted-git-info: 8.1.0
       json-parse-even-better-errors: 4.0.0
       proc-log: 5.0.0
       semver: 7.6.3
@@ -4311,7 +4311,7 @@ snapshots:
     dependencies:
       lru-cache: 6.0.0
 
-  hosted-git-info@8.0.2:
+  hosted-git-info@8.1.0:
     dependencies:
       lru-cache: 10.4.3
 
@@ -4722,7 +4722,7 @@ snapshots:
 
   npm-package-arg@12.0.2:
     dependencies:
-      hosted-git-info: 8.0.2
+      hosted-git-info: 8.1.0
       proc-log: 5.0.0
       semver: 7.6.3
       validate-npm-package-name: 6.0.0
