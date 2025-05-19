@@ -88,6 +88,7 @@ jobs:
         with:
           commit-message: "Prepare Release ${{ steps.explanation.outputs.new_version}} using 'release-plan'"
           labels: "internal"
+          sign-commits: true
           branch: release-preview
           title: Prepare Release ${{ steps.explanation.outputs.new_version }}
           body: |
