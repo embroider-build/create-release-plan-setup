@@ -1,22 +1,8 @@
 {
   "solution": {
     "create-release-plan-setup": {
-      "impact": "minor",
-      "oldVersion": "4.2.0",
-      "newVersion": "4.3.0",
-      "tagName": "latest",
-      "constraints": [
-        {
-          "impact": "minor",
-          "reason": "Appears in changelog section :rocket: Enhancement"
-        },
-        {
-          "impact": "patch",
-          "reason": "Appears in changelog section :memo: Documentation"
-        }
-      ],
-      "pkgJSONPath": "./package.json"
+      "oldVersion": "4.3.0"
     }
   },
-  "description": "## Release (2025-03-13)\n\n* create-release-plan-setup 4.3.0 (minor)\n\n#### :rocket: Enhancement\n* `create-release-plan-setup`\n  * [#209](https://github.com/embroider-build/create-release-plan-setup/pull/209) update release-plan ([@mansona](https://github.com/mansona))\n  * [#204](https://github.com/embroider-build/create-release-plan-setup/pull/204) chore: Bump release-plan ([@TSenter](https://github.com/TSenter))\n\n#### :memo: Documentation\n* `create-release-plan-setup`\n  * [#198](https://github.com/embroider-build/create-release-plan-setup/pull/198) Add directions for creating a new package with a Granular Access Token ([@kategengler](https://github.com/kategengler))\n  * [#199](https://github.com/embroider-build/create-release-plan-setup/pull/199) Add step for brand-new repos ([@kategengler](https://github.com/kategengler))\n\n#### Committers: 3\n- Chris Manson ([@mansona](https://github.com/mansona))\n- Katie Gengler ([@kategengler](https://github.com/kategengler))\n- Tyler Senter ([@TSenter](https://github.com/TSenter))\n"
+  "description": "\n\n\n\n"
 }
